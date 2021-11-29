@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="24572a24-5d93-46bc-9c39-4a2ee15f89d8" ItemType="Solution" CreatedBy="arvindgh" Created="202111291054" GingerVersion="4.1.0.0" Version="4" LastUpdateBy="arvindgh" LastUpdate="202111291150" />
+<Solution EncryptedValidationString="VUmheVjtatgVR0oSpuArDg==" Guid="24572a24-5d93-46bc-9c39-4a2ee15f89d8" Name="GingerWebTestSolution" ParentGuid="00000000-0000-0000-0000-000000000000">
+<ApplicationPlatforms>
+<ApplicationPlatform AppName="MyWebApp" Guid="ef53d0f4-30b9-4960-871f-37fce473dcd7" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" />
+</ApplicationPlatforms>
+
+<ExecutionLoggerConfigurationSetList>
+<ExecutionLoggerConfiguration DataPublishingPhase="PostExecution" DeleteLocalDataOnPublish="No" ExecutionLoggerConfigurationExecResultsFolder="~\ExecutionResults" ExecutionLoggerConfigurationIsEnabled="True" ExecutionLoggerConfigurationMaximalFolderSize="250" Guid="b273ee8b-47f7-42f3-a5d4-337f8058d666" IsSelected="True" ParentGuid="00000000-0000-0000-0000-000000000000" PublishLogToCentralDB="No" SelectedDataRepositoryMethod="LiteDB" Seq="0" />
+</ExecutionLoggerConfigurationSetList>
+
+<HTMLReportsConfigurationSetList>
+<HTMLReportsConfiguration Guid="26499085-a26e-4a13-a403-ed356cc04369" HTMLReportConfigurationMaximalFolderSize="0" HTMLReportsFolder="~\HTMLReports" HTMLReportTemplatesSeq="1" IsSelected="True" ParentGuid="00000000-0000-0000-0000-000000000000" Seq="0" />
+</HTMLReportsConfigurationSetList>
+
+<SolutionCategories>
+<SolutionCategory Category="Product" Guid="edc5c031-cb6b-4f47-b7ee-63e6a912bb0d" ParentGuid="00000000-0000-0000-0000-000000000000">
+<CategoryOptionalValues>
+<SolutionCategoryValue Guid="628bb301-941d-4472-be08-38184d00abd4" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Product 1" />
+<SolutionCategoryValue Guid="018d147f-eaac-4519-9084-08d88db3c577" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Product 2" />
+</CategoryOptionalValues>
+</SolutionCategory>
+<SolutionCategory Category="TestType" Guid="2ef57e8f-51bf-4a46-91bd-2a601f40fc25" ParentGuid="00000000-0000-0000-0000-000000000000">
+<CategoryOptionalValues>
+<SolutionCategoryValue Guid="14b9b605-7384-4f3c-9fc4-7b0fd41104db" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Regression" />
+<SolutionCategoryValue Guid="609b373a-9179-441d-8207-729aeadb5550" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Progression" />
+<SolutionCategoryValue Guid="b5990fd4-4d9c-4442-ae02-48d4b8348c87" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Sanity" />
+<SolutionCategoryValue Guid="9793db47-bc7f-4f23-8e7a-d01b5c46297c" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Acceptance" />
+<SolutionCategoryValue Guid="b12748e1-686d-477a-9294-15b0142e26fe" ParentGuid="00000000-0000-0000-0000-000000000000" Value="End to End" />
+<SolutionCategoryValue Guid="a775b1ff-6843-4a56-96b5-c579a0148968" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Security" />
+<SolutionCategoryValue Guid="b525ecc6-051a-42a2-a80f-ee39279b4515" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Performance" />
+</CategoryOptionalValues>
+</SolutionCategory>
+<SolutionCategory Category="Release" Guid="031b45ef-a3e3-4077-a3b8-a3cc4ecfa008" ParentGuid="00000000-0000-0000-0000-000000000000">
+<CategoryOptionalValues>
+<SolutionCategoryValue Guid="078478a5-51ed-475d-86cc-ee1321f6c085" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Release 1" />
+<SolutionCategoryValue Guid="2f7d5cd8-cf63-4308-a294-e8c20d5f7c07" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Release 2" />
+</CategoryOptionalValues>
+</SolutionCategory>
+<SolutionCategory Category="Iteration" Guid="95eb0c7e-e82e-4c73-9983-f9acf2862dcd" ParentGuid="00000000-0000-0000-0000-000000000000">
+<CategoryOptionalValues>
+<SolutionCategoryValue Guid="a9c56866-296f-47c6-bb85-0562083c68fb" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Iteration 1" />
+<SolutionCategoryValue Guid="c001739d-dbb9-43ab-8086-811dca3c4a34" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Iteration 2" />
+</CategoryOptionalValues>
+</SolutionCategory>
+<SolutionCategory Category="UserCategory1" Guid="728cb08b-b4e4-4328-9ee3-c75ec4f30d20" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<SolutionCategory Category="UserCategory2" Guid="c2de7ff9-201c-45fd-8199-58820e372fd9" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<SolutionCategory Category="UserCategory3" Guid="9bc2c6d3-a2f8-4571-bfb1-486001cc6c3a" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</SolutionCategories>
+
+<Variables>
+<VariablePasswordString Guid="23e901bf-2ac1-489a-815e-0e53ece6e3f4" MappedOutputType="None" Name="VarPassword" ParentGuid="00000000-0000-0000-0000-000000000000" Password="MmPYOEJLrMMSHSqqrlpMsg==" SetAsInputValue="False" SetAsOutputValue="False" />
+<VariableString Guid="97c0b75d-b7ed-4fa9-9236-01eb68a710bb" InitialStringValue="abcd" MappedOutputType="None" Name="NewVar_2" ParentGuid="00000000-0000-0000-0000-000000000000" SetAsInputValue="False" SetAsOutputValue="False" />
+</Variables>
+</Solution></GingerRepositoryItem>

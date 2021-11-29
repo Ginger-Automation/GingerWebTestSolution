@@ -1,0 +1,3 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="7fc11292-fe77-4d25-bb4c-4fbc801d37b0" ItemType="AccessDataSource" CreatedBy="arvindgh" Created="202109210605" GingerVersion="4.1.0.0" Version="3" LastUpdateBy="arvindgh" LastUpdate="202111291056" />
+<AccessDataSource DSType="MSAccess" FilePath="~\\DataSources\AccessTemp1.mdb" Guid="00000000-0000-0000-0000-000000000000" Name="AccessTemp1" ParentGuid="00000000-0000-0000-0000-000000000000" /></GingerRepositoryItem>

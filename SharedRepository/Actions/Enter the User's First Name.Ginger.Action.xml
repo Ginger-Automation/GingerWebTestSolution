@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="6b0786c3-23f8-47ab-b2b3-687a284550a9" ItemType="ActUIElement" CreatedBy="arvindgh" Created="202111120543" GingerVersion="4.1.0.0" Version="2" LastUpdateBy="arvindgh" LastUpdate="202111291056" />
+<ActUIElement Active="True" Description="Enter the User's First Name" Guid="6b0786c3-23f8-47ab-b2b3-687a284550a9" ParentGuid="de1b68ee-199f-4e07-b69e-a2edc3791486" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="bd6b1aad-2ade-4057-8656-d500e6c584c9" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SetText" />
+<ActInputValue Guid="6442a190-0e2f-442a-8492-64ad160d13e8" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="POMElement" />
+<ActInputValue Guid="5538d25c-7876-4e2d-a666-c709d3837775" Param="ElementLocateValue" ParentGuid="00000000-0000-0000-0000-000000000000" Value="f6f13da1-aad3-4e4e-91d5-6ef705797184_2ecc32f1-3728-4ef6-916c-f2f83ddcf55a" />
+<ActInputValue Guid="9f9394b9-e38b-46f7-82e4-2a416ac3d01d" Param="ElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="TextBox" />
+<ActInputValue Guid="6720d200-b70a-470a-90f7-590bb6d444c3" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Amdocs" />
+<ActInputValue Guid="ed347d5b-b241-408e-8649-214dd6dc491c" Param="TargetLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NA" />
+<ActInputValue Guid="fb3f2dc5-fe30-4ebe-a6a5-d043d2d2b10a" Param="TargetElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="5f86de15-39bf-4604-8e1c-ff794746ef33" Param="HandleElementType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+<ActInputValue Guid="50068398-31f6-4042-ab91-4a72630fecba" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
+</InputValues>
+</ActUIElement></GingerRepositoryItem>
