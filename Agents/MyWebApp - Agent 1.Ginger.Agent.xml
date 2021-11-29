@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<GingerRepositoryItem><Header ItemGuid="503e8ceb-1fe0-489a-9c51-ac10fac580d8" ItemType="Agent" CreatedBy="arvindgh" Created="202111291054" GingerVersion="4.1.0.0" Version="2" LastUpdateBy="arvindgh" LastUpdate="202111291056" />
+<GingerRepositoryItem><Header ItemGuid="503e8ceb-1fe0-489a-9c51-ac10fac580d8" ItemType="Agent" CreatedBy="arvindgh" Created="202111291054" GingerVersion="4.1.0.0" Version="3" LastUpdateBy="arvindgh" LastUpdate="202111291237" />
 <Agent AgentType="Driver" DriverType="SeleniumChrome" Guid="503e8ceb-1fe0-489a-9c51-ac10fac580d8" Name="MyWebApp - Agent 1" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web">
 <DriverConfiguration>
 <DriverConfigParam Description="Proxy Server:Port" Guid="b7009820-bd12-4051-ab88-137db37dcea4" Parameter="Proxy" ParentGuid="00000000-0000-0000-0000-000000000000" />
@@ -12,7 +12,7 @@
 <DriverConfigParam Description="Ignore Internet Explorer protected mode" Guid="496522bf-7d90-468a-a232-cac662e9c361" Parameter="IgnoreIEProtectedMode" ParentGuid="00000000-0000-0000-0000-000000000000" Value="true" />
 <DriverConfigParam Description="Only for Internet Explorer &amp; Firefox | Set &quot;true&quot; for using 64Bit Browser" Guid="9a55cd7c-c7ab-4602-a5f1-6000eeca0325" Parameter="Use64Bitbrowser" ParentGuid="00000000-0000-0000-0000-000000000000" Value="false" />
 <DriverConfigParam Description="Use Browser In Private/Incognito Mode (Please use 64bit Browse with Internet Explorer " Guid="b01abff2-96ce-4a44-a425-58857cc9d1b8" Parameter="BrowserPrivateMode" ParentGuid="00000000-0000-0000-0000-000000000000" Value="false" />
-<DriverConfigParam Description="Only for Chrome &amp; Firefox | Set &quot;true&quot; to run the browser in background (headless mode) for faster Execution" Guid="c8487c00-3b39-4eab-bb91-c6fe3dcdaf3f" Parameter="HeadlessBrowserMode" ParentGuid="00000000-0000-0000-0000-000000000000" Value="false" />
+<DriverConfigParam Description="Only for Chrome &amp; Firefox | Set &quot;true&quot; to run the browser in background (headless mode) for faster Execution" Guid="c8487c00-3b39-4eab-bb91-c6fe3dcdaf3f" Parameter="HeadlessBrowserMode" ParentGuid="00000000-0000-0000-0000-000000000000" Value="true" />
 <DriverConfigParam Description="Set &quot;true&quot; to Launch the Browser minimized" Guid="2d161eee-484e-4613-ac44-a2a937943c67" Parameter="BrowserMinimized" ParentGuid="00000000-0000-0000-0000-000000000000" Value="false" />
 <DriverConfigParam Description="Hide the Driver Console (Command Prompt) Window" Guid="8f00c691-1d0c-48f2-9207-1e9de07b9c23" Parameter="HideConsoleWindow" ParentGuid="00000000-0000-0000-0000-000000000000" Value="false" />
 <DriverConfigParam Description="Only For Chrome : Use a valid device name from the DevTools Emulation panel." Guid="474d4cc8-2de0-43bf-934b-7cd25a4fbd2c" Parameter="EmulationDeviceName" ParentGuid="00000000-0000-0000-0000-000000000000" />
