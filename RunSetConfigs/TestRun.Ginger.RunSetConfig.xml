@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<GingerRepositoryItem><Header ItemGuid="2b4b1b0a-1559-4cb2-b390-2998d7e8ae36" ItemType="RunSetConfig" CreatedBy="arvindgh" Created="202111291059" GingerVersion="4.1.0.0" Version="2" LastUpdateBy="arvindgh" LastUpdate="202111291059" />
+<GingerRepositoryItem><Header ItemGuid="2b4b1b0a-1559-4cb2-b390-2998d7e8ae36" ItemType="RunSetConfig" CreatedBy="arvindgh" Created="202111291059" GingerVersion="4.1.0.0" Version="5" LastUpdateBy="arvindgh" LastUpdate="202112021038" />
 <RunSetConfig Guid="2b4b1b0a-1559-4cb2-b390-2998d7e8ae36" Name="TestRun" ParentGuid="00000000-0000-0000-0000-000000000000">
 <CategoriesDefinitions>
 <SolutionCategoryDefinition Category="Product" Guid="f20a6f4a-56f6-4d5f-a6d7-506c5e0390c5" ParentGuid="00000000-0000-0000-0000-000000000000" SelectedValueID="00000000-0000-0000-0000-000000000000" />
@@ -18,10 +18,14 @@
 </ApplicationAgents>
 
 <BusinessFlowsRunList>
-<BusinessFlowRun BusinessFlowGuid="016e3822-95dd-4bf0-a409-e47ee67a9027" BusinessFlowInstanceGuid="b216590f-f79a-45d9-a4ca-439f19d6bb75" BusinessFlowIsActive="True" BusinessFlowName="WebTestFlow" Guid="5430bdea-ee83-408f-b489-9435a8bb40b2" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<BusinessFlowRun BusinessFlowGuid="016e3822-95dd-4bf0-a409-e47ee67a9027" BusinessFlowInstanceGuid="b216590f-f79a-45d9-a4ca-439f19d6bb75" BusinessFlowIsActive="True" BusinessFlowName="WebTestFlow" Guid="c95bbffd-8281-4828-94c9-4add72b95cf0" ParentGuid="00000000-0000-0000-0000-000000000000" />
 </BusinessFlowsRunList>
 </GingerRunner>
 </GingerRunners>
+
+<RunSetActions>
+<RunSetActionHTMLReport Condition="AlwaysRun" Guid="8714ce29-7695-47b7-9895-489c6443e82a" HTMLReportFolderName="/ExecutionReport" isHTMLReportFolderNameUsed="True" Name="Produce HTML Report" ParentGuid="00000000-0000-0000-0000-000000000000" RunAt="ExecutionEnd" />
+</RunSetActions>
 
 <SelfHealingConfiguration>
 <SelfHealingConfig EnableSelfHealing="True" Guid="2abee8d3-dc37-4521-bb21-5204a2f397ca" ParentGuid="00000000-0000-0000-0000-000000000000" ReprioritizePOMLocators="True" />
