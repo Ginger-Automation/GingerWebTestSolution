@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<GingerRepositoryItem><Header ItemGuid="016e3822-95dd-4bf0-a409-e47ee67a9027" ItemType="BusinessFlow" CreatedBy="arvindgh" Created="202111111049" GingerVersion="4.1.0.0" Version="12" LastUpdateBy="arvindgh" LastUpdate="202111291058" />
-<BusinessFlow Elapsed="24092" Guid="016e3822-95dd-4bf0-a409-e47ee67a9027" Name="WebTestFlow" ParentGuid="00000000-0000-0000-0000-000000000000" Source="Ginger" Status="Unknown">
+<GingerRepositoryItem><Header ItemGuid="016e3822-95dd-4bf0-a409-e47ee67a9027" ItemType="BusinessFlow" CreatedBy="arvindgh" Created="202111111049" GingerVersion="4.1.0.0" Version="14" LastUpdateBy="arvindgh" LastUpdate="202112020635" />
+<BusinessFlow Elapsed="36126" Guid="016e3822-95dd-4bf0-a409-e47ee67a9027" Name="WebTestFlow" ParentGuid="00000000-0000-0000-0000-000000000000" Source="Ginger" Status="Unknown">
 <Activities>
-<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="Activity 1" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="e414af34-b32a-4507-a24d-f78fc9ace93c" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="MyWebApp">
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Group" ActivityName="Activity 1" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="e414af34-b32a-4507-a24d-f78fc9ace93c" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="94%" TargetApplication="MyWebApp">
 <Acts>
 <ActBrowserElement Active="True" Description="Browser Action" Guid="57ded210-3fff-4534-9d49-455eb4d77b5d" ImplicitWait="60" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
 <InputValues>
@@ -84,7 +84,7 @@
 <ActInputValue Guid="15a548b7-bbec-49d9-be74-df8be7b3e34d" Param="HandleActionType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unknown" />
 </InputValues>
 </ActUIElement>
-<ActUIElement Active="True" Description="SetText - input text dateOfBirthInput - Current Date" Guid="5ce673f2-27fb-423c-8318-d91aeb986576" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<ActUIElement Description="SetText - input text dateOfBirthInput - Current Date" Guid="5ce673f2-27fb-423c-8318-d91aeb986576" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
 <InputValues>
 <ActInputValue Guid="b20c66a4-858d-422a-88a7-6ed4246173bd" Param="ElementAction" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SetValue" />
 <ActInputValue Guid="37faa966-2cd0-4a08-86b2-c9322e587168" Param="ElementLocateBy" ParentGuid="00000000-0000-0000-0000-000000000000" Value="POMElement" />
@@ -215,7 +215,7 @@
 <ActivitiesGroups>
 <ActivitiesGroup Guid="48a936e2-7d3b-4d54-ac53-6c16f097ea11" Name="Group" ParentGuid="00000000-0000-0000-0000-000000000000">
 <ActivitiesIdentifiers>
-<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="e414af34-b32a-4507-a24d-f78fc9ace93c" ActivityName="Activity 1" Guid="3a995c47-7682-4c23-9863-b3f02637f47e" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="e414af34-b32a-4507-a24d-f78fc9ace93c" ActivityName="Activity 1" Guid="6ec345df-de5e-4a52-a3d9-8906b996aa06" ParentGuid="00000000-0000-0000-0000-000000000000" />
 </ActivitiesIdentifiers>
 </ActivitiesGroup>
 </ActivitiesGroups>
