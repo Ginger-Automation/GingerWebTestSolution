@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<GingerRepositoryItem><Header ItemGuid="503e8ceb-1fe0-489a-9c51-ac10fac580d8" ItemType="Agent" CreatedBy="arvindgh" Created="202111291054" GingerVersion="4.1.0.0" Version="10" LastUpdateBy="arvindgh" LastUpdate="202112030510" />
+<GingerRepositoryItem><Header ItemGuid="503e8ceb-1fe0-489a-9c51-ac10fac580d8" ItemType="Agent" CreatedBy="arvindgh" Created="202111291054" GingerVersion="4.1.0.0" Version="11" LastUpdateBy="arvindgh" LastUpdate="202112061054" />
 <Agent AgentType="Driver" DriverType="SeleniumChrome" Guid="503e8ceb-1fe0-489a-9c51-ac10fac580d8" Name="MyWebApp - Agent 1" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web">
 <DriverConfiguration>
 <DriverConfigParam Description="Proxy Server:Port" Guid="27c28016-0040-4e68-8f3f-ac956c8ac5b4" Parameter="Proxy" ParentGuid="00000000-0000-0000-0000-000000000000" />
@@ -28,7 +28,7 @@
 <DriverConfigParam Description="Start BMP .BAT File - full path to BMP BAT file" Guid="dfd3cf83-bdac-45a6-911f-5b48a899b67a" Parameter="StartBMPBATFile" ParentGuid="00000000-0000-0000-0000-000000000000" Value="C:\...\browsermob\bin\browsermob-proxy.bat" />
 <DriverConfigParam Description="Start BMP Port" Guid="dfef5be5-53fb-4347-b22a-cbaea9ca51e1" Parameter="StartBMPPort" ParentGuid="00000000-0000-0000-0000-000000000000" Value="9090" />
 <DriverConfigParam Description="Take Only Active Frame Or Window Screen Shot In Case Of Failure" Guid="51a58a38-c06e-4716-9dc4-995d1a87f1df" Parameter="TakeOnlyActiveFrameOrWindowScreenShotInCaseOfFailure" ParentGuid="00000000-0000-0000-0000-000000000000" Value="false" />
-<DriverConfigParam Description="Selenium line arguments || Set Selenium arguments separated with ; sign" Guid="20334cd0-69d4-44bd-b6b9-6b8ecb5a041d" Parameter="SeleniumUserArguments" ParentGuid="00000000-0000-0000-0000-000000000000" Value="--no-sandbox" />
+<DriverConfigParam Description="Selenium line arguments || Set Selenium arguments separated with ; sign" Guid="20334cd0-69d4-44bd-b6b9-6b8ecb5a041d" Parameter="SeleniumUserArguments" ParentGuid="00000000-0000-0000-0000-000000000000" Value="--no-sandbox;--remote-debugging-port=9222" />
 <DriverConfigParam Description="Applitool View Key number" Guid="8d02e6fe-67aa-4139-b3b9-3c632325a06f" Parameter="ApplitoolsViewKey" ParentGuid="00000000-0000-0000-0000-000000000000" Value="W3IBcWNoSAABDt21U3X3XpS2xpeV7Rgt990JwQz8th4A110" />
 <DriverConfigParam Description="Applitool Server Url" Guid="73e6da3b-653a-46ca-9270-68bb157dd3d6" Parameter="ApplitoolsServerUrl" ParentGuid="00000000-0000-0000-0000-000000000000" />
 <DriverConfigParam Description="Change to Iframe automatically in case of POM Element execution " Guid="7e342ca6-e7cc-4525-9b19-f2e40f75d8a2" Parameter="HandelIFramShiftAutomaticallyForPomElement" ParentGuid="00000000-0000-0000-0000-000000000000" Value="true" />
