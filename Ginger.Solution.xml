@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<GingerRepositoryItem><Header ItemGuid="24572a24-5d93-46bc-9c39-4a2ee15f89d8" ItemType="Solution" CreatedBy="arvindgh" Created="202111291054" GingerVersion="4.1.0.0" Version="4" LastUpdateBy="arvindgh" LastUpdate="202111291150" />
+<GingerRepositoryItem><Header ItemGuid="24572a24-5d93-46bc-9c39-4a2ee15f89d8" ItemType="Solution" CreatedBy="arvindgh" Created="202111291054" GingerVersion="4.1.0.0" Version="6" LastUpdateBy="arvindgh" LastUpdate="202112170757" />
 <Solution EncryptedValidationString="VUmheVjtatgVR0oSpuArDg==" Guid="24572a24-5d93-46bc-9c39-4a2ee15f89d8" Name="GingerWebTestSolution" ParentGuid="00000000-0000-0000-0000-000000000000">
 <ApplicationPlatforms>
 <ApplicationPlatform AppName="MyWebApp" Guid="ef53d0f4-30b9-4960-871f-37fce473dcd7" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="Web" />
+<ApplicationPlatform AppName="WithoutPlatform-App" Description="Windows Application" Guid="152a30ca-092a-4a73-9ba4-681b335359b7" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" />
 </ApplicationPlatforms>
 
 <ExecutionLoggerConfigurationSetList>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="30dcbaeb-8315-4aec-a546-89a2d2a105b8" ItemType="ActSetVariableValue" CreatedBy="HAIMUZ" Created="202108091501" GingerVersion="4.1.0.0" Version="2" LastUpdateBy="arvindgh" LastUpdate="202112170750" />
+<ActSetVariableValue Active="True" Description="Set Variable Action" Guid="30dcbaeb-8315-4aec-a546-89a2d2a105b8" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="SetValue" StatusConverter="None" VariableName="OSWin" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" Condition="{CS Exp=&quot;{Var Name=OSWin}&quot;.Contains(&quot;Win&quot;)}" FlowControlAction="GoToActivity" Guid="937e2e95-89f2-4317-b4d3-742bf0316f1c" Operator="CSharp" ParentGuid="00000000-0000-0000-0000-000000000000" Value="2f3c14b7-386a-4090-8180-f899b7178cba#GUID_NAME#Linux Script Activity " />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="cebf86df-f66d-4867-bee2-66577ca67231" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{CS Exp=System.Environment.OSVersion}" />
+</InputValues>
+</ActSetVariableValue></GingerRepositoryItem>

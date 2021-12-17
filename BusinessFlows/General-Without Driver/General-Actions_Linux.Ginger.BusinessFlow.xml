@@ -1,0 +1,638 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="c8d525f1-8e0f-4280-a6bb-7b0dee70599e" ItemType="BusinessFlow" CreatedBy="MENIK" Created="202108221652" GingerVersion="4.1.0.0" Version="10" LastUpdateBy="arvindgh" LastUpdate="202112170757" />
+<BusinessFlow Description="transfer all actions from GingerCore project to GingerCoreNet and the actions dependencies " Elapsed="26221" Guid="c8d525f1-8e0f-4280-a6bb-7b0dee70599e" Name="General-Actions_Linux" ParentGuid="00000000-0000-0000-0000-000000000000" Source="Ginger" Status="Unknown">
+<Activities>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Act Validation VB" ActivityName="Variables tests VB" AutomationStatus="Development" Description="test variable condition from differnet level " ErrorHandlerMappingType="AllAvailableHandlers" Guid="59f9e0f2-8461-473a-a7d0-b2241ccb03c0" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="WithoutPlatform-App">
+<Acts>
+<ActSetVariableValue Active="True" Description="Set Variable Action" Guid="2277d5b0-97f0-4560-a559-745ad9936ba0" ParentGuid="30dcbaeb-8315-4aec-a546-89a2d2a105b8" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="SetValue" StatusConverter="None" VariableName="OS Platform" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e1df81b8-2e02-473d-82da-b3d9f53a9973" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{CS Exp=System.Environment.OSVersion}" />
+</InputValues>
+</ActSetVariableValue>
+<ActValidation Active="True" Description="Condition Validation Action" Guid="69bd48d2-f66c-4c3a-90e2-4378f910e55e" ParentGuid="a5727434-5e67-4179-af41-b26aa4bc291e" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="GoToActivity" Guid="329153f0-1850-4c18-ad3f-5636e1645261" Operator="ActionFailed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="6f887575-8b31-4f9a-8dcf-258d4b6497ea#GUID_NAME#Comparison Operators" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="37943cc1-1a9f-4aed-8660-07cae98b8586" Param="CalcEngineType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CS" />
+<ActInputValue Guid="b716e1c1-9023-4487-9c8a-fbef10b473c5" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="&quot;{Var Name=OS Platform}&quot;.Contains(&quot;Win&quot;)" />
+</InputValues>
+</ActValidation>
+<ActValidation Active="True" Description="Bigger then Activity Level" Guid="0bf4859d-1f43-497d-a5f0-d0fcade238ce" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="4c074e29-7e24-41d4-907b-0be02f0eb154" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=ActivityLevel}&gt;10" />
+<ActInputValue Guid="1da4564d-b19f-43c4-8e3e-2d83e38ab1de" Param="CalcEngineType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VBS" />
+</InputValues>
+</ActValidation>
+<ActValidation Active="True" Description="Condition Validation Action" Guid="34b554ed-6e97-4866-8c2a-344eaa383b07" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="IgnoreFail" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e38cbf2d-a1a7-4f06-a222-f631f0845a86" Param="CalcEngineType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CS" />
+<ActInputValue Guid="801ede1e-6244-4cd7-9a23-1bc2f8c80aca" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=BusinessLevel}aaa" />
+</InputValues>
+</ActValidation>
+<ActValidation Active="True" Description="Equal to" Guid="6b7b2c40-2dcd-4c3f-bda6-2898a8802da0" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="0e0e5491-2ec7-43fa-949e-3c2ebd007050" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=ActivityLevel}={Var Name=BusinessLevel}-60" />
+<ActInputValue Guid="682f7514-3b6f-4a35-80ad-14bc35cea542" Param="CalcEngineType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VBS" />
+</InputValues>
+</ActValidation>
+<ActValidation Active="True" Description="Not Equal" Guid="03522aad-8cfc-40a1-ab6b-e7ba47c86254" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="d320040e-cd76-4eed-bb09-f1adf0d2d7c4" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=BusinessLevel}&lt;&gt;{Var Name=ActivityLevel}" />
+<ActInputValue Guid="534d47a4-48bb-49aa-838c-37eac9cdd286" Param="CalcEngineType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VBS" />
+</InputValues>
+</ActValidation>
+</Acts>
+
+<Variables>
+<VariableString Description="activity level variable" Guid="a38a86cc-0833-41c4-b64a-ae155dcbf5a5" InitialStringValue="17" MappedOutputType="None" Name="ActivityLevel" ParentGuid="59f9e0f2-8461-473a-a7d0-b2241ccb03c0" ParentName="General-Actions_Linux\Act Validation VB\Variables tests VB" ParentType="Activity" />
+</Variables>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Act Validation VB" ActivityName="Comparision Operators" AutomationStatus="Development" Description="tests comparition operators on const number condition" ErrorHandlerMappingType="AllAvailableHandlers" Guid="5b829dd3-9416-4700-97d1-616aea0307b6" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="WithoutPlatform-App">
+<Acts>
+<ActValidation Active="True" Description="Equals" Guid="72f610c7-7f11-4f84-b41c-6dfad08fcc46" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="12541be4-0070-4a75-b52d-6811772bd705" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="17=17" />
+<ActInputValue Guid="cf7ad1e7-2f41-4c2c-b98c-f8fb748756cb" Param="CalcEngineType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VBS" />
+</InputValues>
+</ActValidation>
+<ActValidation Active="True" Description="Smaller then" Guid="a2a3a03d-6128-4753-8bef-f21eaee0e900" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="51201701-4958-4bad-8c12-abf133a32197" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="99&lt;1212" />
+<ActInputValue Guid="5712c932-4e28-4b03-a5c0-61516398be5d" Param="CalcEngineType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VBS" />
+</InputValues>
+</ActValidation>
+<ActValidation Active="True" Description="Bigger than" Guid="8084b517-0d61-4612-af7f-e8e32b33bfc9" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e5f1ac90-5025-450e-90b9-73241a41e142" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="999&gt;55" />
+<ActInputValue Guid="50adb89e-4ba7-4039-9b97-d67525611466" Param="CalcEngineType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VBS" />
+</InputValues>
+</ActValidation>
+<ActValidation Active="True" Description="Not Equal" Guid="c58f0c8f-1c9a-4fea-8749-727839e8f0a8" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="61bd8f1b-b070-4499-996e-b6dde370f5b5" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="44&lt;&gt;23" />
+<ActInputValue Guid="a0b40d27-817c-41db-9727-fc51b0a8afb3" Param="CalcEngineType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VBS" />
+</InputValues>
+</ActValidation>
+<ActValidation Active="True" Description="Smaller than Equal" Guid="8cd21bdd-9634-4336-8ebe-a99404fbea3d" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="8b0b99a9-88c9-421d-9eeb-2a5c02902e36" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="66&lt;=66" />
+<ActInputValue Guid="4860d057-7ad2-40b8-8f92-6e2e42cb8d35" Param="CalcEngineType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VBS" />
+</InputValues>
+</ActValidation>
+<ActValidation Active="True" Description="Bigger than Equal" Guid="e3189431-0f9f-4735-9c48-65922a335a21" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="0f4b587c-6d28-4d09-b1d5-b70d95de88c9" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="77&gt;=67" />
+<ActInputValue Guid="ae0c6493-f929-47ab-9564-3d286f8da0e5" Param="CalcEngineType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VBS" />
+</InputValues>
+</ActValidation>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Act Validation VB" ActivityName="Logical Operators" AutomationStatus="Development" Description="tests logical VB operators" ErrorHandlerMappingType="AllAvailableHandlers" Guid="e6fdbbf0-2c14-44ef-a1e4-fa8e4968a16a" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="WithoutPlatform-App">
+<Acts>
+<ActValidation Active="True" Description="Not operator" Guid="0ccb9d6f-a36b-4b34-990d-2a8e8e9764d4" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="ee449b2e-25dc-4056-95fd-873a15b1909c" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="not false" />
+<ActInputValue Guid="2d8c3448-a279-4155-a3e2-b1408630339c" Param="CalcEngineType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VBS" />
+</InputValues>
+</ActValidation>
+<ActValidation Active="True" Description="And Operator" Guid="2266a689-bf4a-478b-91e9-71188db8634c" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="9a6529b8-edac-4a79-b421-60998a29ec4f" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=BusinessLevel}&lt;&gt;88 and {Var Name=BusinessLevel}=77" />
+<ActInputValue Guid="210484f7-6fc4-4365-84a6-9b1413e0cd3c" Param="CalcEngineType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VBS" />
+</InputValues>
+</ActValidation>
+<ActValidation Active="True" Description="Or operator" Guid="52f4e7a6-483d-4019-af3d-813d3a5456ad" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="ad980b4a-c99c-468f-9479-39ddb07ee94b" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="77 &gt; 66 or 99=0" />
+<ActInputValue Guid="34fbbcd3-7e2c-4087-84b6-5ba7b23e1376" Param="CalcEngineType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VBS" />
+</InputValues>
+</ActValidation>
+<ActValidation Active="True" Description="Xor operator" Guid="c21b1305-36d8-43cd-a17e-0b5d1f4d5f92" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="f6f4eef8-b96c-4ebc-85e0-b282a8b39b79" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="99&lt;-8.2 xor 10=10" />
+<ActInputValue Guid="8263f496-05b7-4236-8af7-0c705d70b846" Param="CalcEngineType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VBS" />
+</InputValues>
+</ActValidation>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Act Validation VB" ActivityName="Arithmetic operations" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="4147eb4d-a93f-4aad-abf0-50e9e9b368a5" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="50%" TargetApplication="WithoutPlatform-App">
+<Acts>
+<ActValidation Description="Exponent" Guid="7531c895-9724-42c9-8676-630bc021ad14" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="38d02993-8ae4-4ba6-acca-84dc57f689b6" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="8^2 = 64" />
+<ActInputValue Guid="2c5b3643-4d07-4d2d-9216-a52cd0e424e6" Param="CalcEngineType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VBS" />
+</InputValues>
+</ActValidation>
+<ActValidation Active="True" Description="Module" Guid="b94442b6-b39a-4008-bc8a-f182b65a4ba3" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="47c3252e-9814-4471-87ee-cd4a616ff591" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="15 mod 12 &gt; 2" />
+<ActInputValue Guid="71016553-a00f-48b4-b7cb-97dc5b0a71c7" Param="CalcEngineType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VBS" />
+</InputValues>
+</ActValidation>
+<ActValidation Description="Divide with integer result" Guid="2e1eb601-c68b-46c1-ae66-9ada63cb05bb" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="3c891cb9-863d-4ada-a38d-0850c00fea69" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="8\3 = 2" />
+<ActInputValue Guid="093599b9-d892-4f94-948d-e4da7bcfe1f7" Param="CalcEngineType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VBS" />
+</InputValues>
+</ActValidation>
+<ActValidation Active="True" Description="Some arithmetics" Guid="2a60df1c-f202-42cc-956f-4c7b793e8ef8" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="6bb6195d-2437-48e8-9b13-766637f66ae9" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="80/2*4=180-20" />
+<ActInputValue Guid="295d97c6-ab74-49d0-86b1-a5cc97a7cb66" Param="CalcEngineType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="VBS" />
+</InputValues>
+</ActValidation>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Act Validation CS" ActivityName="Comparison Operators" AutomationStatus="Development" Description="test comparison operator of CS" ErrorHandlerMappingType="AllAvailableHandlers" Guid="6f887575-8b31-4f9a-8dcf-258d4b6497ea" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="WithoutPlatform-App">
+<Acts>
+<ActValidation Active="True" Description="Equal To" Guid="9f6c6400-9b0c-49a0-bf73-95da0006adad" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e9cb971b-0cd7-43e3-877d-61331d2f7fdf" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{CS Exp=20==20}" />
+<ActInputValue Guid="2b12331f-224c-4b57-9e88-93015a7f89cf" Param="CalcEngineType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CS" />
+</InputValues>
+</ActValidation>
+<ActValidation Active="True" Description="Bigger than" Guid="aaa859f0-8d76-496f-945d-6d84ac6e9d43" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="ad283f39-d1dd-4b2e-a9ff-1337017f6d7b" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{CS Exp=999&gt;{Var Name=BusinessLevel}}" />
+<ActInputValue Guid="fbefe768-3d97-4f96-8802-cce31442309a" Param="CalcEngineType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CS" />
+</InputValues>
+</ActValidation>
+<ActValidation Active="True" Description="Smaller Than" Guid="5d5bfbd1-ee78-4bb2-aefe-e769cf09d6ed" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="7cf53ae5-e999-4187-ad75-4e123a55b5e8" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{CS Exp=8&lt;{Var Name=CS Activity}}" />
+<ActInputValue Guid="097025a4-5a4e-4c54-942c-590861f31466" Param="CalcEngineType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CS" />
+</InputValues>
+</ActValidation>
+<ActValidation Active="True" Description="Not Equal" Guid="08865f76-603c-42ff-a37c-b5a244bd6046" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="3ef66cca-bd67-480a-829b-2227d84dc855" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{CS Exp = 66 != -4.999}" />
+<ActInputValue Guid="e4c06ca4-36be-4987-9c2c-7072b6ad8f12" Param="CalcEngineType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CS" />
+</InputValues>
+</ActValidation>
+<ActValidation Active="True" Description="Bigger than Equal" Guid="ee93f286-23c4-4696-8113-9a5051baeb08" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="7fa784de-2745-4030-9d35-590bddfb5fc1" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{CS Exp=20&gt;=10}" />
+<ActInputValue Guid="f22f4f83-4274-4db2-be7f-bd8c957b59f1" Param="CalcEngineType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CS" />
+</InputValues>
+</ActValidation>
+</Acts>
+
+<Variables>
+<VariableString Guid="2b1c3e94-6cd1-4465-9374-2c91f4b47e79" InitialStringValue="12" MappedOutputType="None" Name="CS Activity" ParentGuid="6f887575-8b31-4f9a-8dcf-258d4b6497ea" ParentName="General-Actions_Linux\Act Validation CS\Comparison Operators" ParentType="Activity" />
+</Variables>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Act Validation CS" ActivityName="Logical Operators" AutomationStatus="Development" Description="tests logical CS operators" ErrorHandlerMappingType="AllAvailableHandlers" Guid="cd7134cc-3b82-4420-8255-e9d1cdae94af" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="WithoutPlatform-App">
+<Acts>
+<ActValidation Active="True" Description="Not operator" Guid="206566da-a921-4266-8bc8-e94328316663" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="26416995-ca27-4c94-9005-bf992102f28c" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{CS Exp=!(@&quot;Hello&quot; == @&quot;Hell&quot;)}" />
+<ActInputValue Guid="20075d73-2873-4f39-918d-bea77330e5e9" Param="CalcEngineType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CS" />
+</InputValues>
+</ActValidation>
+<ActValidation Active="True" Description="And operator" Guid="b4cbe2e5-7fde-480c-af3d-15cc2c5c49aa" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="ad1e4a3a-fb5a-4caa-9636-2fa5191661e8" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{CS Exp=@&quot;abc&quot;.Contains(&quot;b&quot;) &amp;&amp; @&quot;Abc&quot;.StartsWith(@&quot;A&quot;)}" />
+<ActInputValue Guid="98ad6afc-3b45-4361-8604-c8162bc478dc" Param="CalcEngineType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CS" />
+</InputValues>
+</ActValidation>
+<ActValidation Active="True" Description="Or operator" Guid="e2c0f13d-1174-4f16-aa1f-57053270441a" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="b3514e9c-4ab3-469d-9874-1a2a9c379a51" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{CS Exp=@&quot;abc&quot;.Contains(&quot;b&quot;) || 70&lt;10 || 88&lt;5}" />
+<ActInputValue Guid="58339829-7aaf-4670-aee7-1bddbb2a4708" Param="CalcEngineType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CS" />
+</InputValues>
+</ActValidation>
+<ActValidation Active="True" Description="Xor operator" Guid="6f3dcc46-1380-498b-97a2-4060fd10e8d8" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="28158d43-5a6f-426c-a62e-8ec81009ac2a" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{CS Exp=20&gt;10 ^ 10.1&lt;10}" />
+<ActInputValue Guid="2ab203b0-7739-4e13-b1f5-b1d7a57724c7" Param="CalcEngineType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CS" />
+</InputValues>
+</ActValidation>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Act Validation CS" ActivityName="Arithmetic operations" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="ea14003a-dd7d-41d4-afb8-245bd2039e21" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="WithoutPlatform-App">
+<Acts>
+<ActValidation Active="True" Description="Modulo" Guid="0732a57c-c35e-417c-a03d-0b553ca804b1" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="aeff2ddf-7e3f-491b-8fbb-e0563aefb453" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{CS Exp=(7%7)==0}" />
+<ActInputValue Guid="027848e9-4a0a-4bcd-a73a-27c27d7543c6" Param="CalcEngineType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CS" />
+</InputValues>
+</ActValidation>
+<ActValidation Active="True" Description="Some arithmetics" Guid="b93887c8-ad07-4627-a1cc-b5a80f3e8074" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="8fdd2af3-cf8d-41ea-bfb8-496578aa5463" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{CS Exp=20*20*20 &gt; 20 &amp;&amp; 16/2/2 == 4}" />
+<ActInputValue Guid="4c56e3ee-6345-4bcb-b7c9-b2ba9f3c0540" Param="CalcEngineType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CS" />
+</InputValues>
+</ActValidation>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="ActTextFileOperations" ActivityName="WriteFile" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="436d78f5-e763-406a-a192-9c73bdd8f911" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="WithoutPlatform-App">
+<Acts>
+<ActReadTextFile Active="True" AppendAt="End" Description="WriteUTF32" FileActionMode="Write" Guid="a58b7bc6-11e2-43a7-9599-2717839007af" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TextFileEncoding="UTF32" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="2d75a847-ff19-4a5b-8a27-357eddd066cb" Param="TextFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{FD Object=Solution Field=Folder}\Documents\TextFileOperations\ReadUTF32.txt" />
+<ActInputValue Guid="9f14d521-a31a-43b7-88f3-1a4b498d4e8b" Param="TextToWrite" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Some text&#xD;&#xA;Ü ß&#xD;&#xA;ώϕϙ&#xD;&#xA;&#xD;&#xA;щьююђ&#xD;&#xA;ѬҦҦӕӔӔ" />
+<ActInputValue Guid="f0b0ce73-20c1-4711-8679-e09202c57c35" Param="AppendLineNumber" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActReadTextFile>
+<ActReadTextFile Active="True" AppendAt="End" Description="WriteUTF8" FileActionMode="Write" Guid="b344302c-19e4-47cd-9001-2728c5aabcb0" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TextFileEncoding="UTF8" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="08954aa9-d42b-4eb6-827d-bafb2e8f5ddc" Param="TextFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{FD Object=Solution Field=Folder}\Documents\TextFileOperations\ReadUTF8.txt" />
+<ActInputValue Guid="1302e77f-84dd-4352-b126-af27fbcf0cad" Param="TextToWrite" ParentGuid="00000000-0000-0000-0000-000000000000" Value="&lt;html&gt;&#xD;&#xA;  &lt;head&gt;&#xD;&#xA;    &lt;title&gt;Html Doc&lt;/title&gt;&#xD;&#xA;  &lt;/head&gt;&#xD;&#xA;  &lt;body&gt;&#xD;&#xA;    &lt;h1&gt;Some Header&lt;/h1&gt;&#xD;&#xA;    &lt;p&gt;&#xD;&#xA;      Add some content to file &#xD;&#xA;      щьююђ&#xD;&#xA;      ѬҦҦӕӔ &#xD;&#xA;      Ӕשלום&#xD;&#xA;    &lt;/p&gt;&#xD;&#xA;  &lt;/body&gt;&#xD;&#xA;&lt;/html&gt;" />
+<ActInputValue Guid="e648bee9-ebe1-4485-997a-d80b794dac57" Param="AppendLineNumber" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActReadTextFile>
+<ActReadTextFile Active="True" AppendAt="End" Description="WriteUNICODE" FileActionMode="Write" Guid="4c0f87c4-0a61-4e5d-ae1a-402ec821fae7" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TextFileEncoding="Unicode" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="6d44a297-4044-4fb3-bf50-0a80c1b6c2e0" Param="TextFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{FD Object=Solution Field=Folder}\Documents\TextFileOperations\ReadUnicode.txt" />
+<ActInputValue Guid="9d34dc4f-c3ca-4b0a-8c1a-928e500f47cc" Param="TextToWrite" ParentGuid="00000000-0000-0000-0000-000000000000" Value="𐌼𐌰𐌲 𐌲𐌻𐌴𐍃 𐌹̈𐍄𐌰𐌽, 𐌽𐌹 𐌼𐌹𐍃 𐍅𐌿 𐌽𐌳𐌰𐌽 𐌱𐍂𐌹𐌲𐌲𐌹𐌸." />
+<ActInputValue Guid="68b18365-7972-443d-9688-a3ae1a867f80" Param="AppendLineNumber" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActReadTextFile>
+<ActReadTextFile Active="True" AppendAt="End" Description="WriteUTF7" FileActionMode="Write" Guid="309845f5-08df-4f3d-ba21-efb93b339862" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TextFileEncoding="UTF7" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="36657236-3b08-4ea0-86ec-e05668c0d0cb" Param="TextFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{FD Object=Solution Field=Folder}\Documents\TextFileOperations\ReadUTF7.txt" />
+<ActInputValue Guid="539b468b-eaf4-493b-9fe6-fadec056b105" Param="TextToWrite" ParentGuid="00000000-0000-0000-0000-000000000000" Value="&lt;html&gt;&#xD;&#xA;  &lt;head&gt;&#xD;&#xA;    &lt;title&gt;Html Doc&lt;/title&gt;&#xD;&#xA;  &lt;/head&gt;&#xD;&#xA;  &lt;body&gt;&#xD;&#xA;    &lt;h1&gt;Some Header&lt;/h1&gt;&#xD;&#xA;    &lt;p&gt;&#xD;&#xA;      Add some content to file!@!#$#$$%^%$&amp;.&#xD;&#xA;    &lt;/p&gt;&#xD;&#xA;  &lt;/body&gt;&#xD;&#xA;&lt;/html&gt;" />
+<ActInputValue Guid="af778f20-1f82-42ed-9fe5-63de4afd6271" Param="AppendLineNumber" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActReadTextFile>
+<ActReadTextFile Active="True" AppendAt="End" Description="WriteASCII" FileActionMode="Write" Guid="024e0f37-5a77-4b0e-af0e-398a281bfeaf" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TextFileEncoding="ASCII" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="38cec98d-0744-416b-bd1a-840708119332" Param="TextFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{FD Object=Solution Field=Folder}\Documents\TextFileOperations\AsciiFile.txt" />
+<ActInputValue Guid="0fc5d66b-8668-4e89-b28e-97dd0a3ddbf8" Param="TextToWrite" ParentGuid="00000000-0000-0000-0000-000000000000" Value="&lt;html&gt;&#xD;&#xA;  &lt;head&gt;&#xD;&#xA;    &lt;title&gt;Html Doc&lt;/title&gt;&#xD;&#xA;  &lt;/head&gt;&#xD;&#xA;  &lt;body&gt;&#xD;&#xA;    &lt;h1&gt;Some Header&lt;/h1&gt;&#xD;&#xA;    &lt;p&gt;&#xD;&#xA;      Add some content to file~~!@#$%^&amp;*(&gt;&lt;&gt;.&#xD;&#xA;      DSFADSFSADF(*)^*&amp;()(*(&amp;%^$$@#^%@&#xD;&#xA;    &lt;/p&gt;&#xD;&#xA;  &lt;/body&gt;&#xD;&#xA;&lt;/html&gt;" />
+<ActInputValue Guid="518a010b-5e91-4d5f-bfe3-2835f9523435" Param="AppendLineNumber" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActReadTextFile>
+<ActReadTextFile Active="True" AppendAt="End" Description="WriteBigEndian" FileActionMode="Write" Guid="12d2ec93-cf89-443b-8ebe-f44b1495da2e" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TextFileEncoding="BigEndianUnicode" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="73a9dfb6-e4e8-4576-a38f-6ac5f5e27000" Param="TextFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{FD Object=Solution Field=Folder}\Documents\TextFileOperations\BigEndianFile.txt" />
+<ActInputValue Guid="99b4ca16-096b-4bd2-8191-d14d70a84ebe" Param="TextToWrite" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Some text&#xD;&#xA;Ü ß&#xD;&#xA;ώϕϙ&#xD;&#xA;&#xD;&#xA;щьююђ&#xD;&#xA;ѬҦҦӕӔӔ" />
+<ActInputValue Guid="ad8110dd-0206-4175-9f55-ce7b18c02e62" Param="AppendLineNumber" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActReadTextFile>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="ActTextFileOperations" ActivityName="ReadFile" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="245e9579-5674-4086-918d-7f8408335710" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="WithoutPlatform-App">
+<Acts>
+<ActReadTextFile Active="True" AppendAt="End" Description="ReadUTF8" FileActionMode="Read" Guid="0e4d2982-0171-41c7-a56a-1275b41b762c" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TextFileEncoding="UTF8" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="69598844-8c97-4e89-a8f9-9bb150e6f9d2" Param="TextFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{FD Object=Solution Field=Folder}\Documents\TextFileOperations\ReadUTF8.txt" />
+<ActInputValue Guid="06836e13-2f60-4fe2-a5d4-1bcaaf2cfb4e" Param="TextToWrite" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="7b64a4cf-93a7-4423-808d-147dde81f49e" Param="AppendLineNumber" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="331fd26d-579f-43b1-86a1-b6930a442960" mExpected="&lt;html&gt;&#xD;&#xA;  &lt;head&gt;&#xD;&#xA;    &lt;title&gt;Html Doc&lt;/title&gt;&#xD;&#xA;  &lt;/head&gt;&#xD;&#xA;  &lt;body&gt;&#xD;&#xA;    &lt;h1&gt;Some Header&lt;/h1&gt;&#xD;&#xA;    &lt;p&gt;&#xD;&#xA;      Add some content to file &#xD;&#xA;      щьююђ&#xD;&#xA;      ѬҦҦӕӔ &#xD;&#xA;      Ӕשלום&#xD;&#xA;    &lt;/p&gt;&#xD;&#xA;  &lt;/body&gt;&#xD;&#xA;&lt;/html&gt;" Operator="Equals" Param="File Content" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActReadTextFile>
+<ActReadTextFile Active="True" AppendAt="End" Description="ReadUTF32" FileActionMode="Read" Guid="fe8bd5d5-de58-42f4-b035-d3baf1bc0ef3" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TextFileEncoding="UTF32" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="fbd4afc5-f9c0-4cd1-8df1-49b05e858887" Param="TextFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{FD Object=Solution Field=Folder}\Documents\TextFileOperations\ReadUTF32.txt" />
+<ActInputValue Guid="83df43ec-732e-4e9a-88a5-4868fdcea151" Param="TextToWrite" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="41c73ad1-58c3-44e8-b340-682baa0e84fd" Param="AppendLineNumber" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="65a2f249-2448-4114-a7bd-291b34e6d2ea" mExpected="Some text&#xD;&#xA;Ü ß&#xD;&#xA;ώϕϙ&#xD;&#xA;&#xD;&#xA;щьююђ&#xD;&#xA;ѬҦҦӕӔӔ" Operator="Equals" Param="File Content" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActReadTextFile>
+<ActReadTextFile Active="True" AppendAt="End" Description="ReadUNICODE" FileActionMode="Read" Guid="565b8d5d-334c-488c-a931-6ebd2236128c" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TextFileEncoding="Unicode" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="8dc2e510-3c88-4512-ad48-aa237e8e2252" Param="TextFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{FD Object=Solution Field=Folder}\Documents\TextFileOperations\ReadUnicode.txt" />
+<ActInputValue Guid="13e59b61-9764-4568-bfef-76ae99726200" Param="TextToWrite" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="45b7ba02-8af3-47df-983d-545fb1b95049" Param="AppendLineNumber" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="8089a445-2052-447c-81d0-ddc653832300" mExpected="𐌼𐌰𐌲 𐌲𐌻𐌴𐍃 𐌹̈𐍄𐌰𐌽, 𐌽𐌹 𐌼𐌹𐍃 𐍅𐌿 𐌽𐌳𐌰𐌽 𐌱𐍂𐌹𐌲𐌲𐌹𐌸." Operator="Equals" Param="File Content" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActReadTextFile>
+<ActReadTextFile Active="True" AppendAt="End" Description="ReadUTF7" FileActionMode="Read" Guid="67a2b218-bc40-4055-b63f-7ac40d3b3ecd" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TextFileEncoding="UTF7" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="dfe70bed-088b-4872-b3fb-faa9e69cd0b9" Param="TextFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{FD Object=Solution Field=Folder}\Documents\TextFileOperations\ReadUTF7.txt" />
+<ActInputValue Guid="bc3bc064-7712-430a-8824-d9d4ca342a44" Param="TextToWrite" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="1fa02643-8300-4ade-a01a-93bd953c3246" Param="AppendLineNumber" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="5d42c222-eb54-4a96-9fe7-e49997a779f8" mExpected="&lt;html&gt;&#xD;&#xA;  &lt;head&gt;&#xD;&#xA;    &lt;title&gt;Html Doc&lt;/title&gt;&#xD;&#xA;  &lt;/head&gt;&#xD;&#xA;  &lt;body&gt;&#xD;&#xA;    &lt;h1&gt;Some Header&lt;/h1&gt;&#xD;&#xA;    &lt;p&gt;&#xD;&#xA;      Add some content to file!@!#$#$$%^%$&amp;.&#xD;&#xA;    &lt;/p&gt;&#xD;&#xA;  &lt;/body&gt;&#xD;&#xA;&lt;/html&gt;" Operator="Equals" Param="File Content" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActReadTextFile>
+<ActReadTextFile Active="True" AppendAt="End" Description="ReadASCII" FileActionMode="Read" Guid="5baa732e-9035-4190-aca1-2f1b6dc8e949" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TextFileEncoding="ASCII" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="6f980cde-894a-4057-a610-0becad92b5db" Param="TextFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{FD Object=Solution Field=Folder}\Documents\TextFileOperations\AsciiFile.txt" />
+<ActInputValue Guid="c3b981ff-d23b-477f-95a8-942ba27924b6" Param="TextToWrite" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="2197cf1d-ff48-4add-8981-c0bd9d1a1432" Param="AppendLineNumber" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="e55e2365-4f17-4653-a17b-4d2dd125493d" mExpected="&lt;html&gt;&#xD;&#xA;  &lt;head&gt;&#xD;&#xA;    &lt;title&gt;Html Doc&lt;/title&gt;&#xD;&#xA;  &lt;/head&gt;&#xD;&#xA;  &lt;body&gt;&#xD;&#xA;    &lt;h1&gt;Some Header&lt;/h1&gt;&#xD;&#xA;    &lt;p&gt;&#xD;&#xA;      Add some content to file~~!@#$%^&amp;*(&gt;&lt;&gt;.&#xD;&#xA;      DSFADSFSADF(*)^*&amp;()(*(&amp;%^$$@#^%@&#xD;&#xA;    &lt;/p&gt;&#xD;&#xA;  &lt;/body&gt;&#xD;&#xA;&lt;/html&gt;" Operator="Equals" Param="File Content" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActReadTextFile>
+<ActReadTextFile Active="True" AppendAt="End" Description="ReadBigEndian" FileActionMode="Read" Guid="4b80b654-a568-416a-9e00-27b38d4d971b" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TextFileEncoding="BigEndianUnicode" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="d8a1f39a-2352-4daa-b3ea-7aa6de0257d6" Param="TextFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{FD Object=Solution Field=Folder}\Documents\TextFileOperations\BigEndianFile.txt" />
+<ActInputValue Guid="65379ce0-6bbd-4f5b-871d-51e4789bd0ae" Param="TextToWrite" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="115fae9b-cd34-40e5-be00-089b9206fb87" Param="AppendLineNumber" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="35322665-a5aa-4c90-9d79-689f3dfda41e" mExpected="Some text&#xD;&#xA;Ü ß&#xD;&#xA;ώϕϙ&#xD;&#xA;&#xD;&#xA;щьююђ&#xD;&#xA;ѬҦҦӕӔӔ" Operator="Equals" Param="File Content" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActReadTextFile>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="ActTextFileOperations" ActivityName="AppendActivity" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="c9ea8b68-088e-419c-b4eb-2629fd2211e6" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="WithoutPlatform-App">
+<Acts>
+<ActReadTextFile Active="True" AppendAt="End" Description="WriteFile" FileActionMode="Write" Guid="4e369bdd-1355-45c9-8e74-85e56a847f41" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TextFileEncoding="UTF8" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="6eb0a5ef-be53-4c11-87b4-c2043f716ba5" Param="TextFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{FD Object=Solution Field=Folder}\Documents\TextFileOperations\AppendFile.txt" />
+<ActInputValue Guid="3a08116f-b9f7-4b0e-9b4c-8fa3a45c9711" Param="TextToWrite" ParentGuid="00000000-0000-0000-0000-000000000000" Value="this file will add append text - At the end:&gt;&gt;" />
+<ActInputValue Guid="0446bd88-87ae-4de4-8762-8667be2bbeaf" Param="AppendLineNumber" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActReadTextFile>
+<ActReadTextFile Active="True" AppendAt="End" Description="AppendAtEnd" FileActionMode="Append" Guid="4f13d239-5583-4a95-8bd1-2deaa849c1f3" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TextFileEncoding="UTF8" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="cf0ad38b-d5b1-4b2a-9892-79a2a9e11779" Param="TextFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{FD Object=Solution Field=Folder}\Documents\TextFileOperations\AppendFile.txt" />
+<ActInputValue Guid="85ffc5ff-2e9f-4eff-8ab2-107c86de31df" Param="TextToWrite" ParentGuid="00000000-0000-0000-0000-000000000000" Value="text to append!!!" />
+<ActInputValue Guid="27d2ce42-bd9f-4c49-bfc3-12d3f3bbcc7c" Param="AppendLineNumber" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActReadTextFile>
+<ActReadTextFile Active="True" AppendAt="End" Description="Read appended file" FileActionMode="Read" Guid="39834507-f373-4041-9b10-0f3de4a19be7" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TextFileEncoding="UTF8" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="f30a8017-b8c1-4434-93c6-72982d8ad737" Param="TextFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{FD Object=Solution Field=Folder}\Documents\TextFileOperations\AppendFile.txt" />
+<ActInputValue Guid="ee34fc13-e21d-4bb0-80f9-908684ad60fd" Param="TextToWrite" ParentGuid="00000000-0000-0000-0000-000000000000" Value="text to append!!!" />
+<ActInputValue Guid="4e947d50-8fb3-4d60-9b9d-1f58a0142951" Param="AppendLineNumber" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="55f9f6e6-2c5f-4038-b881-5bc6e397bf16" mExpected="this file will add append text - At the end:&gt;&gt;text to append!!!" Operator="Equals" Param="File Content" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActReadTextFile>
+<ActReadTextFile Active="True" AppendAt="Start" Description="AppendAtStart" FileActionMode="Append" Guid="e59a4a0f-ad16-4953-8dfc-e7e8d29da491" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TextFileEncoding="UTF8" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="5e0fe147-43e4-49e0-bee8-3b1b8685fc94" Param="TextFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{FD Object=Solution Field=Folder}\Documents\TextFileOperations\AppendFile.txt" />
+<ActInputValue Guid="1f2ab6aa-8147-40e8-a860-5f9426221003" Param="TextToWrite" ParentGuid="00000000-0000-0000-0000-000000000000" Value="text to append At Start -&gt;&gt;" />
+<ActInputValue Guid="cc9e62d1-4559-42d0-9735-64f41dea7a46" Param="AppendLineNumber" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActReadTextFile>
+<ActReadTextFile Active="True" AppendAt="End" Description="Read after start appended  " FileActionMode="Read" Guid="46f36958-5229-46cf-a182-ff1d987a9d1d" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TextFileEncoding="UTF8" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="92ac9f00-8433-4ea6-bcde-c0983b7c9bbe" Param="TextFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{FD Object=Solution Field=Folder}\Documents\TextFileOperations\AppendFile.txt" />
+<ActInputValue Guid="644c0e0c-d176-40d9-94c2-800892772e2c" Param="TextToWrite" ParentGuid="00000000-0000-0000-0000-000000000000" Value="text to append!!!" />
+<ActInputValue Guid="791467ee-1aac-449b-8b5b-284c7f6ab33f" Param="AppendLineNumber" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="f28d8d6e-18f5-49b5-a9e2-cc21f488ba2e" mExpected="text to append At Start -&gt;&gt;&#xD;&#xA;this file will add append text - At the end:&gt;&gt;text to append!!!&#xD;&#xA;" Operator="Equals" Param="File Content" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActReadTextFile>
+<ActReadTextFile Active="True" AppendAt="SpecificLine" Description="AppendAt Specific Line" FileActionMode="Append" Guid="5a058f93-da56-4acc-9951-9d4581325354" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TextFileEncoding="UTF8" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="cb429af9-e31a-47c9-8d6a-13d9ed2b05cb" Param="TextFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{FD Object=Solution Field=Folder}\Documents\TextFileOperations\AppendFile.txt" />
+<ActInputValue Guid="36a845eb-60f1-4816-93f8-e4772e4f7009" Param="TextToWrite" ParentGuid="00000000-0000-0000-0000-000000000000" Value="&lt;&lt;&lt;text to append At Line {Var Name=Line}&gt;&gt;&gt;" />
+<ActInputValue Guid="8918498c-959c-4638-9f5a-b84cb0166336" Param="AppendLineNumber" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=Line}" />
+</InputValues>
+</ActReadTextFile>
+<ActReadTextFile Active="True" AppendAt="End" Description="Read After appended in Line 2" FileActionMode="Read" Guid="9d91ddd3-e593-4eae-a497-d4026542eb47" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" TextFileEncoding="UTF8" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="ffa8c845-6c92-44dc-b40b-d2e787659a6f" Param="TextFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{FD Object=Solution Field=Folder}\Documents\TextFileOperations\AppendFile.txt" />
+<ActInputValue Guid="bd6ce307-d87d-42e2-951c-f6ab0591fb4b" Param="TextToWrite" ParentGuid="00000000-0000-0000-0000-000000000000" Value="text to append!!!" />
+<ActInputValue Guid="caa64a68-a36e-4904-b3f5-98f880357d6b" Param="AppendLineNumber" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="fe3f587c-cca6-4bd5-a18c-97ca9a554e87" mExpected="text to append At Start -&gt;&gt;&#xD;&#xA;&lt;&lt;&lt;text to append At Line 2&gt;&gt;&gt;&#xD;&#xA;this file will add append text - At the end:&gt;&gt;text to append!!!&#xD;&#xA;" Operator="Equals" Param="File Content" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActReadTextFile>
+</Acts>
+
+<Variables>
+<VariableString Guid="57cf4cff-8d3a-412b-81fe-5c88b1a541f4" InitialStringValue="2" MappedOutputType="None" Name="Line" ParentGuid="c9ea8b68-088e-419c-b4eb-2629fd2211e6" ParentName="General-Actions_Linux\ActTextFileOperations\AppendActivity" ParentType="Activity" />
+</Variables>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" ActivitiesGroupID="ActFileTransfer" ActivityName="filetransfer" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="f556568f-7661-468a-86e9-8c8c2e0c64d7" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="WithoutPlatform-App">
+<Acts>
+<ActFileTransfer Active="True" Description="Put File" FileTransferAction="PutFile" Guid="d7d6acc4-c6dc-4a26-a756-36ad17e92bda" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="f58bcc23-e536-4f23-98b0-9844911410eb" Param="PCPath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="~\\Documents\TextFileOperations\fileTransferToUnix.txt" />
+<ActInputValue Guid="62f6184a-e3f9-46ee-b51f-7ec1bc66277d" Param="UnixPath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/home/ginger/Haim" />
+<ActInputValue Guid="23f71a7e-1aaf-4aae-a874-9fd3c38f77b8" Param="UserName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ginger" />
+<ActInputValue Guid="aea530bc-fc81-41ff-830c-ddb8e2746908" Param="Password" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unix11!" />
+<ActInputValue Guid="bb43bde5-f7db-4e25-8e68-8615203a8a13" Param="PrivateKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="75507f6a-57fc-4fb0-898f-b91f770a66cd" Param="PrivateKeyPassPhrase" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="f3bbe4da-9aa8-4991-bcf9-918aebe4519b" Param="Port" ParentGuid="00000000-0000-0000-0000-000000000000" Value="22" />
+<ActInputValue Guid="a7d638e6-39b7-4ab4-8b4a-22a67b78803b" Param="Host" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CMILDEV162" />
+<ActInputValue Guid="950f6a6c-e253-4dee-8656-cbfc2a4f9a50" Param="KeyboardIntractiveAuthentication" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActFileTransfer>
+<ActFileTransfer Active="True" Description="Get File" FileTransferAction="GetFile" Guid="f7bf2714-c05e-4d40-a972-e6e931a52237" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e743902f-ac86-4a22-9ed2-410dc064e817" Param="PCPath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{FD Object=Solution Field=Folder}\Documents" />
+<ActInputValue Guid="f65a8e90-0cdd-4eef-a47a-2c74fda2a884" Param="UnixPath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/home/ginger/Haim/fileTransferToUnix.TXT" />
+<ActInputValue Guid="ab0c3eb0-62d7-400a-9fb7-3b72a4c0740d" Param="UserName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ginger" />
+<ActInputValue Guid="dcaecf22-938f-450a-bb5a-f05508dc4d22" Param="Password" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unix11!" />
+<ActInputValue Guid="3215eb6f-573c-4397-a7c2-0d1e01dbd3e6" Param="PrivateKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="4d82cdca-27aa-4768-a898-dd0572fa0b46" Param="PrivateKeyPassPhrase" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="50b14a1b-c008-43f5-a3ec-310bee6223a9" Param="Port" ParentGuid="00000000-0000-0000-0000-000000000000" Value="22" />
+<ActInputValue Guid="8280ea5a-0431-4ac5-a562-f985d84ace10" Param="Host" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CMILDEV162" />
+<ActInputValue Guid="1fb078c7-7ac6-4a85-893c-539acc2ed22c" Param="KeyboardIntractiveAuthentication" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActFileTransfer>
+<ActFileTransfer Active="True" Description="Put File interactive" FileTransferAction="PutFile" Guid="9d72f12a-8fcd-45e6-95bd-a27e09107e7c" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="c296ca0e-aee1-4360-92da-81bc498e6dfd" Param="PCPath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="~\\Documents\TextFileOperations\fileTransferToUnix.txt" />
+<ActInputValue Guid="de84bd1f-2b5b-4dd2-bec7-1a48e8ea1878" Param="UnixPath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/home/ginger/Haim" />
+<ActInputValue Guid="ffef958d-dde0-4507-9ad4-ea6971c7d471" Param="UserName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ginger" />
+<ActInputValue Guid="d2155689-5de4-4afd-8835-4f9baf578711" Param="Password" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unix11!" />
+<ActInputValue Guid="557df983-14ee-4a65-a551-93cc1532e9ae" Param="PrivateKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="eaf2ad86-6296-44c2-bef7-3a7638e40f6a" Param="PrivateKeyPassPhrase" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="cfc9f576-6a42-4e5f-93e8-28d4e84d059e" Param="Port" ParentGuid="00000000-0000-0000-0000-000000000000" Value="22" />
+<ActInputValue Guid="c216aee6-1624-4906-9a1c-937f90e4184d" Param="Host" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CMILDEV162" />
+<ActInputValue Guid="d38a7b5c-5d67-4923-b17b-cc3c5feafe63" Param="KeyboardIntractiveAuthentication" ParentGuid="00000000-0000-0000-0000-000000000000" Value="True" />
+</InputValues>
+</ActFileTransfer>
+<ActFileTransfer Active="True" Description="Get File interactive" FileTransferAction="GetFile" Guid="3c8ebf86-33e3-4c04-b3f2-8430d1a349c6" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="5ca3cd05-215e-488e-8cca-f2e6c8865e6a" Param="PCPath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{FD Object=Solution Field=Folder}\Documents" />
+<ActInputValue Guid="b2a3b1ce-8a91-419b-82bf-036acb222205" Param="UnixPath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/home/ginger/Haim/fileTransferToUnix.TXT" />
+<ActInputValue Guid="1818687e-7786-4490-a2ed-88fc7fed8d87" Param="UserName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ginger" />
+<ActInputValue Guid="7c7b63c7-bde9-4759-92ee-e4e649926b1b" Param="Password" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Unix11!" />
+<ActInputValue Guid="dfd7ff97-c170-494b-9ddc-3046288932b0" Param="PrivateKey" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="7f13e70f-6ed1-43fc-a2dd-79bd3997a63d" Param="PrivateKeyPassPhrase" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="b02b3389-bf51-4154-803f-b96b0a230116" Param="Port" ParentGuid="00000000-0000-0000-0000-000000000000" Value="22" />
+<ActInputValue Guid="00866190-7074-4da9-a3ae-932d8135810d" Param="Host" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CMILDEV162" />
+<ActInputValue Guid="bc061eb4-5bb6-4d69-a1d3-b507fd27e7e5" Param="KeyboardIntractiveAuthentication" ParentGuid="00000000-0000-0000-0000-000000000000" Value="True" />
+</InputValues>
+</ActFileTransfer>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="ActFileOperation" ActivityName="File Operations" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="3a160329-4b2c-401e-b1a4-eeb1f9c373ba" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="WithoutPlatform-App">
+<Acts>
+<ActFileOperations Active="True" Description="File Exists" FileOperationMode="CheckFileExists" Guid="01340edb-d002-49f8-8e87-48781d565be9" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="66bb9d26-62a1-4384-88a8-d2b7c98f0130" Param="SourceFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="~\\Documents\TextFileOperations\fileExists.txt" />
+<ActInputValue Guid="3f11d128-50d8-4b43-97bf-8e23c0557634" Param="DestinationFolder" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="09e36920-c590-4025-b031-dc2a3b69c393" Param="Arguments" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActFileOperations>
+<ActFileOperations Active="True" Description="Folder Exists" FileOperationMode="CheckFolderExists" Guid="72a56d8d-bc55-4dc5-b8c3-f768b1cd5ae0" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="108540b1-5344-420a-8931-592b14b86e87" Param="SourceFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="~\\Documents\TextFileOperations" />
+<ActInputValue Guid="c9998b22-2d55-49e0-a695-060472b22811" Param="DestinationFolder" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="5f5f35a1-f0c4-45a3-ab92-1fb1e3896d7e" Param="Arguments" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActFileOperations>
+<ActFileOperations Active="True" Description="Delete Directory files" FileOperationMode="DeleteDirectoryFiles" Guid="d390bb57-cb24-40dd-9a70-4c01ca95a59b" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="ca2bf4a7-655b-439f-a0a5-d2912cae9cab" Param="SourceFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="~\\Documents\TextFileOperations\DirectoryToDelete" />
+<ActInputValue Guid="cba07b7e-258d-41a2-afbe-b6b720df9176" Param="DestinationFolder" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="d6c7cf92-e727-43dc-864f-5f35c88d5a50" Param="Arguments" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActFileOperations>
+<ActFileOperations Active="True" Description="Delete Directory files_Copy" FileOperationMode="DeleteDirectoryFiles" Guid="f6312eb8-f8df-4a92-8bbd-46e843647b23" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="5f2f1f39-4f11-4210-a5bb-9e61b5efc827" Param="SourceFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="~\\Documents\TextFileOperations\TestDirectory" />
+<ActInputValue Guid="a532ecdb-a14c-4a8b-a085-3302a83c07f8" Param="DestinationFolder" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="508c89a6-9f3f-4a99-b780-c1354a4b6573" Param="Arguments" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActFileOperations>
+<ActFileOperations Active="True" Description="Copy File" FileOperationMode="Copy" Guid="99d6ccca-bfd9-429c-a7fc-cc3329e4944a" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" Condition="{CS Exp=!System.Environment.OSVersion.ToString().Contains(&quot;Windows&quot;)}" FlowControlAction="GoToAction" Guid="8282e89f-3ed5-4883-af64-665958b9e37d" Operator="CSharp" ParentGuid="00000000-0000-0000-0000-000000000000" Value="10e452a7-414f-404e-a2cc-2f8e1f1a0231#GUID_NAME#Execute file Linux" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="cb7e9eb0-6bc3-4004-a10a-3712c068c778" Param="SourceFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="~\\Documents\TextFileOperations\fileToCopy.txt" />
+<ActInputValue Guid="1a89f392-6feb-47df-9b05-036b65e75fd0" Param="DestinationFolder" ParentGuid="00000000-0000-0000-0000-000000000000" Value="~\\Documents\TextFileOperations\DirectoryToDelete\movedFile.txt" />
+<ActInputValue Guid="24e3e7ff-1f8f-4848-b6bf-63fffd1a4662" Param="Arguments" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActFileOperations>
+<ActFileOperations Active="True" Description="Execute file" FileOperationMode="Execute" Guid="c42cb0d4-3738-4a5b-b2b5-c1b70f1e5601" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" Condition="{CS Exp=System.Environment.OSVersion.ToString().Contains(&quot;Windows&quot;)}" FlowControlAction="GoToAction" Guid="364babd8-10fd-4418-9555-ca1d481d3442" Operator="CSharp" ParentGuid="00000000-0000-0000-0000-000000000000" Value="a0006b1e-6914-4891-896a-20f83b6e7166#GUID_NAME#Move File" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="cdb04a6a-7242-4f2c-9e69-7dbb3882cdd8" Param="SourceFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{FD Object=Solution Field=Folder}\Documents\Projects\netcoreapp\ConsoleAppDemo.exe" />
+<ActInputValue Guid="719c4949-8fe3-4dbf-ad0e-cd91d75ddede" Param="DestinationFolder" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="1555296d-5b38-4840-bee3-ff00c62e179c" Param="Arguments" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActFileOperations>
+<ActFileOperations Active="True" Description="Execute file Linux" FileOperationMode="Execute" Guid="10e452a7-414f-404e-a2cc-2f8e1f1a0231" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="44433274-04b4-4657-9bb2-0420c6c1bd92" Param="SourceFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/bin/bash" />
+<ActInputValue Guid="6d4a50c4-a604-42b6-9fb0-ea4f47fb20b4" Param="DestinationFolder" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="43923f42-d908-4f3a-b47f-4396f4c10427" Param="Arguments" ParentGuid="00000000-0000-0000-0000-000000000000" Value="dotnet &quot;{FD Object=Solution Field=Folder}/Documents/Projects/netcoreapp/ConsoleAppDemo.dll&quot; dynamic --filename &quot;{FD Object=Solution Field=Folder}/Documents/Projects/netcoreapp/ConsoleAppDemo.runtimeconfig.dev.json&quot;" />
+</InputValues>
+</ActFileOperations>
+<ActFileOperations Active="True" Description="Move File" FileOperationMode="Move" Guid="a0006b1e-6914-4891-896a-20f83b6e7166" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="779a1d6e-c87e-4f2f-bcec-656af2fe5c5b" Param="SourceFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="~\\Documents\TextFileOperations\DirectoryToDelete\movedFile.txt" />
+<ActInputValue Guid="b1383e96-e5d4-4919-ada0-f91e6c846a5d" Param="DestinationFolder" ParentGuid="00000000-0000-0000-0000-000000000000" Value="~\\Documents\TextFileOperations\TestDirectory\" />
+<ActInputValue Guid="091f9490-ea5e-4c68-9939-4230a5e7b2aa" Param="Arguments" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActFileOperations>
+<ActFileOperations Active="True" Description="Unzip File" FileOperationMode="UnZip" Guid="702ce547-8409-4687-8d67-c2edf28c4898" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="fadcd0c7-edb4-4aa9-b479-fdb3dfd68315" Param="SourceFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="~\\Documents\TextFileOperations\zippedFile.zip" />
+<ActInputValue Guid="67e0c06a-d0f2-45d7-ae3f-c4fe294a8d35" Param="DestinationFolder" ParentGuid="00000000-0000-0000-0000-000000000000" Value="~\\Documents\TextFileOperations\DirectoryToDelete\zippedfile.txt" />
+<ActInputValue Guid="9c0b3881-38a3-49d1-97fa-036e74f7483d" Param="Arguments" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActFileOperations>
+</Acts>
+
+<Variables>
+<VariableString Description="Variable String" Guid="0788b1d0-de47-436e-ab04-f7da9af11c9e" InitialStringValue="C:\Ginger\Ginger-Linux-Transformation-Testing\Documents\WOEI" MappedOutputType="None" Name="WOEIPath" ParentGuid="3a160329-4b2c-401e-b1a4-eeb1f9c373ba" ParentName="General-Actions_Linux\ActFileOperation\File Operations" ParentType="Activity" />
+<VariableString Description="Variable String" Guid="832d8e3c-bad2-4f56-ab5c-f80ea6368d2e" InitialStringValue="C:\Ginger\Ginger-Linux-Transformation-Testing\Documents" MappedOutputType="None" Name="DocumentFolder" ParentGuid="3a160329-4b2c-401e-b1a4-eeb1f9c373ba" ParentName="General-Actions_Linux\ActFileOperation\File Operations" ParentType="Activity" />
+</Variables>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" ActivitiesGroupID="Email Activities" ActivityName="Email Activity" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="8efa0c3e-4142-4d4e-8395-ee78298a3916" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="WithoutPlatform-App">
+<Acts>
+<ActeMail Active="True" Description="Email smtp " Guid="fc43ea47-61c6-4bda-91a2-33513b45ab6e" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="6fca6cf2-5b8f-42ca-82a6-0f8892b341a3" Param="Port" ParentGuid="00000000-0000-0000-0000-000000000000" Value="25" />
+<ActInputValue Guid="139aad2e-0e92-4a9e-b686-9d8165da9475" Param="Host" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ILRAADAGFE1.corp.amdocs.com" />
+<ActInputValue Guid="0f341994-412f-4f69-9968-c8e5c0ca542e" Param="EnableSSL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="False" />
+<ActInputValue Guid="c57db5f9-cf04-4264-8eb1-952eca691d67" Param="ConfigureCredential" ParentGuid="00000000-0000-0000-0000-000000000000" Value="True" />
+<ActInputValue Guid="4896003c-61ef-4944-b6f8-9f509dbf755e" Param="MailOption" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SMTP" />
+<ActInputValue Guid="58b708f6-2124-4821-8bbe-cc59c2ed591c" Param="MailFromDisplayName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="_Amdocs Ginger Automation" />
+<ActInputValue Guid="299ef405-10bc-42d0-819c-88a5e0f35178" Param="MailFrom" ParentGuid="00000000-0000-0000-0000-000000000000" Value="menik@amdocs.com" />
+<ActInputValue Guid="eea61b2c-c006-4198-b319-70e6d7607866" Param="Mailto" ParentGuid="00000000-0000-0000-0000-000000000000" Value="gingergen@amdocs.com" />
+<ActInputValue Guid="2670c519-c2f6-4587-bc27-a8f47e94becc" Param="Subject" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Linux email tests" />
+<ActInputValue Guid="36eef089-bd8a-4cb1-8d55-8806f96a5832" Param="Body" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Hello world" />
+<ActInputValue Guid="224c54cc-7d04-4c81-9296-e956cb83216c" Param="User" ParentGuid="00000000-0000-0000-0000-000000000000" Value="menik" />
+<ActInputValue Guid="c7ded25c-1d58-4410-9f46-1bfd7067ca6d" Param="Pass" ParentGuid="00000000-0000-0000-0000-000000000000" Value="gT4+2phtb7t//mkfREIDiw==" />
+</InputValues>
+</ActeMail>
+<ActeMail Active="True" Description="Email smtp with attachment" Guid="4274c81c-7e1b-483c-92b7-edfd6042ea60" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e728e77c-4c17-4068-9fc5-584fb19de28f" Param="Port" ParentGuid="00000000-0000-0000-0000-000000000000" Value="25" />
+<ActInputValue Guid="dc189fa3-bffa-43ff-94a0-55e8a7007e33" Param="Host" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ILRAADAGFE1.corp.amdocs.com" />
+<ActInputValue Guid="37490ab1-513a-4475-abab-e7f677ff526c" Param="EnableSSL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="False" />
+<ActInputValue Guid="38b8e0c3-4ca3-49bc-b0fe-ce160854ab8a" Param="ConfigureCredential" ParentGuid="00000000-0000-0000-0000-000000000000" Value="True" />
+<ActInputValue Guid="17f3657b-54d1-4353-b068-f5314f55da6a" Param="MailOption" ParentGuid="00000000-0000-0000-0000-000000000000" Value="SMTP" />
+<ActInputValue Guid="c40ba951-adb1-4c56-9c95-9c1fd04c3ee6" Param="MailFromDisplayName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="_Amdocs Ginger Automation" />
+<ActInputValue Guid="1d2b9083-1442-4d33-bc28-414d4bdd55a1" Param="MailFrom" ParentGuid="00000000-0000-0000-0000-000000000000" Value="menik@amdocs.com" />
+<ActInputValue Guid="d2d80cb6-6343-4587-9cdc-f0a4f85745fe" Param="Mailto" ParentGuid="00000000-0000-0000-0000-000000000000" Value="gingergen@amdocs.com" />
+<ActInputValue Guid="bdb64c0c-2cd6-4f48-a6b5-3cbc1240193d" Param="Subject" ParentGuid="00000000-0000-0000-0000-000000000000" Value="email Linux with attachments" />
+<ActInputValue Guid="2eaa34b4-6ca1-4b27-8466-4efd593878ad" Param="Body" ParentGuid="00000000-0000-0000-0000-000000000000" Value="send email with attachment" />
+<ActInputValue Guid="4b4e172b-1a5d-47fa-a08d-15d90920ff50" Param="AttachmentFileName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="~\\Documents\Pictures\pic1.jpg" />
+<ActInputValue Guid="19358349-054d-496a-b515-5abaf5f52a4f" Param="User" ParentGuid="00000000-0000-0000-0000-000000000000" Value="menik" />
+<ActInputValue Guid="38d18361-8423-4eb0-9213-2bb5f0eb37b6" Param="Pass" ParentGuid="00000000-0000-0000-0000-000000000000" Value="gT4+2phtb7t//mkfREIDiw==" />
+</InputValues>
+</ActeMail>
+</Acts>
+</Activity>
+</Activities>
+
+<ActivitiesGroups>
+<ActivitiesGroup Guid="051394fa-0a01-461c-a2a6-e717a4de852f" Name="Act Validation VB" ParentGuid="00000000-0000-0000-0000-000000000000">
+<ActivitiesIdentifiers>
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityDescription="test variable condition from differnet level " ActivityGuid="59f9e0f2-8461-473a-a7d0-b2241ccb03c0" ActivityName="Variables tests VB" Guid="f615df96-de66-4477-9cf8-5081c64b7914" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityDescription="tests comparition operators on const number condition" ActivityGuid="5b829dd3-9416-4700-97d1-616aea0307b6" ActivityName="Comparision Operators" Guid="255cc290-9604-4b43-893c-9cf26ec5de5c" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityDescription="tests logical VB operators" ActivityGuid="e6fdbbf0-2c14-44ef-a1e4-fa8e4968a16a" ActivityName="Logical Operators" Guid="a06743a6-e31f-4bf6-bf14-041329947d4e" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="4147eb4d-a93f-4aad-abf0-50e9e9b368a5" ActivityName="Arithmetic operations" Guid="40812d9f-717d-4d67-b021-f153cba6de25" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</ActivitiesIdentifiers>
+</ActivitiesGroup>
+<ActivitiesGroup Guid="95bc6787-b159-4bbe-8a64-14e93d71bf3a" Name="Act Validation CS" ParentGuid="00000000-0000-0000-0000-000000000000">
+<ActivitiesIdentifiers>
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityDescription="test comparison operator of CS" ActivityGuid="6f887575-8b31-4f9a-8dcf-258d4b6497ea" ActivityName="Comparison Operators" Guid="7149cbef-8d6c-4345-9d91-a0667a9dc8cb" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityDescription="tests logical CS operators" ActivityGuid="cd7134cc-3b82-4420-8255-e9d1cdae94af" ActivityName="Logical Operators" Guid="9ae778ac-1fae-4bb9-832f-19f4b4dbd651" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="ea14003a-dd7d-41d4-afb8-245bd2039e21" ActivityName="Arithmetic operations" Guid="1d656821-0dd9-426e-b547-cce8b5b960f6" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</ActivitiesIdentifiers>
+</ActivitiesGroup>
+<ActivitiesGroup Guid="08b2bc3b-b1f8-4a40-9e35-7d22d8ca671b" Name="ActTextFileOperations" ParentGuid="00000000-0000-0000-0000-000000000000">
+<ActivitiesIdentifiers>
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="436d78f5-e763-406a-a192-9c73bdd8f911" ActivityName="WriteFile" Guid="f7ccd5df-846b-414f-a599-312d5505e6e5" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="245e9579-5674-4086-918d-7f8408335710" ActivityName="ReadFile" Guid="b698de5c-026e-448b-9eff-7cdc7c0d53f2" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="c9ea8b68-088e-419c-b4eb-2629fd2211e6" ActivityName="AppendActivity" Guid="163b85c3-389b-4de4-9f20-417a38c8fb14" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</ActivitiesIdentifiers>
+</ActivitiesGroup>
+<ActivitiesGroup Guid="c5a07e95-7a01-400c-aaf3-a1e6e64c0bc7" Name="ActFileTransfer" ParentGuid="00000000-0000-0000-0000-000000000000">
+<ActivitiesIdentifiers>
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="f556568f-7661-468a-86e9-8c8c2e0c64d7" ActivityName="filetransfer" Guid="667af7a4-a73c-4ca7-b8a7-cf61b5f87f6d" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</ActivitiesIdentifiers>
+</ActivitiesGroup>
+<ActivitiesGroup Guid="96fa4c55-29dd-4efc-98c4-0f47af0329e6" Name="ActFileOperation" ParentGuid="00000000-0000-0000-0000-000000000000">
+<ActivitiesIdentifiers>
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="3a160329-4b2c-401e-b1a4-eeb1f9c373ba" ActivityName="File Operations" Guid="1acedbb3-ae97-4d55-8739-0412cbc604a8" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</ActivitiesIdentifiers>
+</ActivitiesGroup>
+<ActivitiesGroup Guid="814a35f3-688a-4345-842f-4dfd5677d97c" Name="Email Activities" ParentGuid="00000000-0000-0000-0000-000000000000">
+<ActivitiesIdentifiers>
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="8efa0c3e-4142-4d4e-8395-ee78298a3916" ActivityName="Email Activity" Guid="6631f4e8-69d3-4948-95f3-ec7664e2c29b" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</ActivitiesIdentifiers>
+</ActivitiesGroup>
+</ActivitiesGroups>
+
+<TargetApplications>
+<TargetApplication AppName="WithoutPlatform-App" Guid="964e23b2-3495-43f1-9b9c-0d005324b70b" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</TargetApplications>
+
+<Variables>
+<VariableString Description="Business Level variable" Guid="74b08f72-127f-40b1-8946-3eef62c0dfad" InitialStringValue="77" MappedOutputType="None" Name="BusinessLevel" ParentGuid="c8d525f1-8e0f-4280-a6bb-7b0dee70599e" ParentName="General-Actions_Linux" ParentType="Business Flow" />
+<VariableString Guid="fbe718e1-7e21-450f-a168-302846ea2d54" InitialStringValue="Window" MappedOutputType="None" Name="OS Platform" ParentGuid="c8d525f1-8e0f-4280-a6bb-7b0dee70599e" ParentName="General-Actions_Linux" ParentType="Business Flow" />
+</Variables>
+</BusinessFlow></GingerRepositoryItem>

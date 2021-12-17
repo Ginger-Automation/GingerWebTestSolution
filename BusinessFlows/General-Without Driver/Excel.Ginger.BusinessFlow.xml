@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="8b64fa82-d5f3-4fe0-b46d-9012eac42e4e" ItemType="BusinessFlow" CreatedBy="HAIMUZ" Created="202104120927" GingerVersion="4.1.0.0" Version="95" LastUpdateBy="arvindgh" LastUpdate="202112170757" />
+<BusinessFlow Elapsed="5948" Guid="8b64fa82-d5f3-4fe0-b46d-9012eac42e4e" Name="Excel" ParentGuid="00000000-0000-0000-0000-000000000000" Source="Ginger" Status="Unknown">
+<Activities>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Excel act" ActivityName="Excel actions" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="04ea5d6e-667e-4d0e-97aa-96d22b970b1d" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="WithoutPlatform-App">
+<Acts>
+<ActExcel Active="True" Description="Read Data first row" ExcelActionType="ReadData" Guid="9a365e6c-3d86-431d-917e-2582fe41b830" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="a801cd1d-bc89-4993-bbf2-164b5aacfb02" Param="ColMappingRules" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="c6f61ad0-1341-48c6-b9d3-91c23e15b2ae" Param="ExcelFileName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="~\\Documents\WOEI\WOEIExcel.xlsx" />
+<ActInputValue Guid="42233da8-9949-41ef-92a2-bb9fff6dd224" Param="SheetName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Data" />
+<ActInputValue Guid="ded437c4-d12d-47ea-9b55-8742ba936fad" Param="SelectRowsWhere" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="aa6cc9c5-ab9d-4e67-8d63-c9a6508daf17" Param="PrimaryKeyColumn" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="f7d229c8-ce9b-498b-93b0-ec91e37144b7" Param="SetDataUsed" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="7bc98b60-a97a-4997-ae30-fda7250426a4" mExpected="2" Operator="Equals" Param="AB" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+<ActReturnValue Active="True" Guid="d0b39d8f-248e-48d6-bd9f-b0237ce63dc9" mExpected=" 2" Operator="Equals" Param="BC" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+<ActReturnValue Active="True" Guid="f1fa337e-7ae0-4b1d-a148-2a4a3f3f836f" mExpected="3" Operator="Equals" Param="CD" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+<ActReturnValue Active="True" Guid="31fd29e1-d743-4137-a5d7-170b3eca0620" mExpected="DS123" Operator="Equals" Param="DE" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActExcel>
+<ActExcel Active="True" Description="Read Data all rows" ExcelActionType="ReadData" Guid="c51800f6-f24a-43b6-92e6-a172dffa698c" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SelectAllRows="True" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="8da70fe0-f1db-4706-aca7-d4df6d8573bf" Param="ColMappingRules" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="7cf72285-4c6a-4ccd-845e-218dfac4e23e" Param="ExcelFileName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="~\\Documents\WOEI\WOEIExcel.xlsx" />
+<ActInputValue Guid="679dbc30-73c7-47a5-a920-c5a2b505d931" Param="SheetName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Data" />
+<ActInputValue Guid="ead9d6b9-da2c-4229-a8e7-a5dfe8dd3202" Param="SelectRowsWhere" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="a8defd9e-7803-4f24-aed4-7efec79b7156" Param="PrimaryKeyColumn" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActExcel>
+<ActExcel Active="True" Description="Read Data first row with filter" ExcelActionType="ReadData" Guid="dbeff2ea-1d10-4a81-9fb7-3204a21b666c" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SelectAllRows="True" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="214fcdca-f162-4bd9-9881-7a739c1d9716" Param="ColMappingRules" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="62dd3c8c-72e4-4461-8e03-6e0fee53e34c" Param="ExcelFileName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="~\\Documents\WOEI\WOEIExcel.xlsx" />
+<ActInputValue Guid="c6a7b932-2e87-42c8-867f-0aa5a573e5b5" Param="SheetName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Data" />
+<ActInputValue Guid="7f571b3d-a88a-4def-a87c-4937639c7130" Param="SelectRowsWhere" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="380e1b37-aa4f-4496-99bd-38ec9e67c6c4" Param="PrimaryKeyColumn" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActExcel>
+<ActExcel Active="True" Description="Read Data all rows with filter" ExcelActionType="ReadData" Guid="f565a526-5903-4cbf-a04b-7a780a5a8050" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SelectAllRows="True" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="dd220ecb-618f-4643-a4c4-d2dde63bb106" Param="ColMappingRules" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="bc13a09f-2f96-492e-b5e3-1044a05962d6" Param="ExcelFileName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="~\\Documents\WOEI\WOEIExcel.xlsx" />
+<ActInputValue Guid="8710c778-0c6f-472f-8a3c-62e3e312af38" Param="SheetName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Data" />
+<ActInputValue Guid="83442e5e-fd34-4fdb-9269-c27b8fabfe24" Param="SelectRowsWhere" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CD='33'" />
+<ActInputValue Guid="670746d6-9fd4-444a-a8e7-0cc0c2572609" Param="PrimaryKeyColumn" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActExcel>
+<ActExcel Active="True" Description="Read Data all rows with filter_Copy" ExcelActionType="ReadData" Guid="b48eb55e-c370-4876-9f53-ba09c66ecc56" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SelectAllRows="True" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="719422ab-e362-413e-b979-f9bab5e0c8fb" Param="ColMappingRules" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="f9fb8005-4cd0-47f5-858a-d3f18f60496a" Param="ExcelFileName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="~\\Documents\WOEI\WOEIExcel.xlsx" />
+<ActInputValue Guid="e40a1f62-2572-4565-b1af-4a29332a55b5" Param="SheetName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Data" />
+<ActInputValue Guid="ae2790bb-9ea4-4c19-b19d-5134ba4122ac" Param="SelectRowsWhere" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=filter one}" />
+<ActInputValue Guid="15ce54cb-7ac5-4192-9819-9ba9640bcb26" Param="PrimaryKeyColumn" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActExcel>
+<ActExcel Active="True" Description="Read Data first row with multi filters" ExcelActionType="ReadData" Guid="65fa24ae-96ac-424a-8bbf-2a6d1b89c6b7" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="2bfcfcda-db4e-4359-947a-ad411744c5d6" Param="ColMappingRules" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="96dc2ced-123e-4a0c-b940-a212f6912b8b" Param="ExcelFileName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="~\\Documents\WOEI\WOEIExcel.xlsx" />
+<ActInputValue Guid="b8a386d5-4e23-4806-9a8d-3265f8633c57" Param="SheetName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Data" />
+<ActInputValue Guid="61ce36d6-089a-4302-81c1-9fc5e43936b5" Param="SelectRowsWhere" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CD='5' or BC='4'" />
+<ActInputValue Guid="1b530326-4462-4b43-bc8e-a0897f4815ea" Param="PrimaryKeyColumn" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="c71fe6cb-392a-4729-b088-c7ec2885a624" mExpected="4" Operator="Equals" Param="AB" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+<ActReturnValue Active="True" Guid="cd10f215-21ca-4fa6-ad79-31eb02516c70" mExpected="4" Operator="Equals" Param="BC" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+<ActReturnValue Active="True" Guid="ac079993-954f-4fb0-9f99-69b1396fc1d0" mExpected="5" Operator="Equals" Param="CD" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+<ActReturnValue Active="True" Guid="41d5f445-7a4a-45f7-80ec-d86ad0e0bf72" mExpected="QPR" Operator="Equals" Param="DE" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActExcel>
+<ActExcel Active="True" Description="Read Data all rows with multi filters" ExcelActionType="ReadData" Guid="1153b402-6165-4ad8-8c08-add5c0f69a39" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SelectAllRows="True" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="ccba749a-da35-4937-95ed-ba853fa1626d" Param="ColMappingRules" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="c01b0714-9e3c-4a96-b601-c24749ac0ef3" Param="ExcelFileName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="~\\Documents\WOEI\WOEIExcel.xlsx" />
+<ActInputValue Guid="2469cb96-4993-45f2-b68f-4f94ffe33b51" Param="SheetName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Data" />
+<ActInputValue Guid="c2e35c43-45a8-4214-aba5-70774a88ff90" Param="SelectRowsWhere" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CD=3 and BC=' 2'" />
+<ActInputValue Guid="a0738008-a4bc-49bf-8db8-1134f2f9688b" Param="PrimaryKeyColumn" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="da37be26-ccfb-421f-b368-1b527939b88b" mExpected="2" Operator="Equals" Param="AB" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="None" />
+<ActReturnValue Active="True" Guid="8156b1fd-e57e-4eed-afb1-600d00f8de40" mExpected=" 2" Operator="Equals" Param="BC" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="None" />
+<ActReturnValue Active="True" Guid="8c390a43-f914-4447-be30-7d4f0c9dbe29" mExpected="3" Operator="Equals" Param="CD" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="None" />
+<ActReturnValue Active="True" Guid="17834ff5-71a6-4222-97bc-f40c527c428c" mExpected="DS123" Operator="Equals" Param="DE" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="None" />
+</ReturnValues>
+</ActExcel>
+<ActExcel Active="True" Description="Read Data first row with filter &amp; PK" ExcelActionType="ReadData" Guid="aea21d17-b343-4b19-8035-bf2b7fc96c7d" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="2d236622-1ded-4bbd-8f91-0c01a9ea17e2" Param="ColMappingRules" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="e9b8d922-469b-4904-8f32-845c4dad4832" Param="ExcelFileName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="~\\Documents\WOEI\WOEIExcel.xlsx" />
+<ActInputValue Guid="50e92444-e005-4813-a728-8a50e12588d7" Param="SheetName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Data" />
+<ActInputValue Guid="86ac3e80-3db3-40e2-8ba6-d6c6471cfa0f" Param="SelectRowsWhere" ParentGuid="00000000-0000-0000-0000-000000000000" Value="AB=2" />
+<ActInputValue Guid="2952ff08-989d-432d-82fb-cde527e736c0" Param="PrimaryKeyColumn" ParentGuid="00000000-0000-0000-0000-000000000000" Value="AB" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="d1f43398-9471-4575-870b-5945e46b9d1b" mExpected="2" Operator="Equals" Param="AB" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+<ActReturnValue Active="True" Guid="0a390052-7a34-4b3a-9e80-acb580144621" mExpected=" 2" Operator="Equals" Param="BC" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+<ActReturnValue Active="True" Guid="7cac75ce-f2ef-45b8-9141-f82c17ccd722" mExpected="3" Operator="Equals" Param="CD" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+<ActReturnValue Active="True" Guid="8b0e8b9a-53eb-4aef-bba5-1772f8fb8358" mExpected="DS123" Operator="Equals" Param="DE" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActExcel>
+<ActExcel Active="True" Description="Read Data all rows with filter &amp; PK" ExcelActionType="ReadData" Guid="2278e70a-2f4d-4e93-90a6-89d4abfa877b" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SelectAllRows="True" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="04a7683d-88b5-4035-bc8b-3e3e764b1014" Param="ColMappingRules" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="92b240e0-aad4-4a9e-9b72-3ba54a3c7447" Param="ExcelFileName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="~\\Documents\WOEI\WOEIExcel.xlsx" />
+<ActInputValue Guid="66f6876b-43ef-4df0-b3df-3c445c949000" Param="SheetName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Data" />
+<ActInputValue Guid="a15a6e5e-f3bf-4688-a5c9-ca80b79b6fcb" Param="SelectRowsWhere" ParentGuid="00000000-0000-0000-0000-000000000000" Value="AB=2" />
+<ActInputValue Guid="637f1c90-cb45-4c81-8b2f-09b2fcc84f4a" Param="PrimaryKeyColumn" ParentGuid="00000000-0000-0000-0000-000000000000" Value="AB" />
+</InputValues>
+</ActExcel>
+<ActExcel Active="True" Description="Read Data first row with filter, PK &amp; update data" ExcelActionType="ReadData" Guid="92b353d2-ac08-413f-b530-7467cc55515b" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="ec083151-73bf-42ef-ade1-5aed36f2dcfd" Param="ColMappingRules" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="a5b3feb1-ee8c-47a1-85d1-2c60cfe79e79" Param="ExcelFileName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="~\\Documents\WOEI\WOEIExcelReadUpdate.xlsx" />
+<ActInputValue Guid="d500d608-5223-467a-9086-20e8f0cb035c" Param="SheetName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Data" />
+<ActInputValue Guid="c8278e80-d614-47e8-ad70-4cfdcb1d72f9" Param="SelectRowsWhere" ParentGuid="00000000-0000-0000-0000-000000000000" Value="AB=4" />
+<ActInputValue Guid="b6a0a4f8-29dd-4135-9c42-96448eefefef" Param="PrimaryKeyColumn" ParentGuid="00000000-0000-0000-0000-000000000000" Value="AB" />
+<ActInputValue Guid="aedaa122-a335-4f92-bde5-79f6501a6015" Param="SetDataUsed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="DE='test'" />
+</InputValues>
+</ActExcel>
+<ActExcel Active="True" Description="Read Data all rows with filter, PK &amp; update data" ExcelActionType="ReadData" Guid="524137a7-8083-450e-b6e4-7f8f30c79f21" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SelectAllRows="True" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="f772b983-28af-4c92-bd75-752a9f8c13b4" Param="ColMappingRules" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="cbf176b4-5b06-42f0-9ac6-f84d74240f6f" Param="ExcelFileName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="~\\Documents\WOEI\WOEIExcelReadUpdate.xlsx" />
+<ActInputValue Guid="fbff6f2e-ba79-4e70-9cd7-ac4393e4f672" Param="SheetName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Data" />
+<ActInputValue Guid="d05d20e5-c8b4-4dcc-bc11-19d895604017" Param="SelectRowsWhere" ParentGuid="00000000-0000-0000-0000-000000000000" Value="AB=4" />
+<ActInputValue Guid="425a68fb-9024-4a8d-a578-c49b75d6f07f" Param="PrimaryKeyColumn" ParentGuid="00000000-0000-0000-0000-000000000000" Value="AB" />
+<ActInputValue Guid="ec223089-ce91-4a8c-bf70-148e4bf353ae" Param="SetDataUsed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="DE='test'" />
+</InputValues>
+</ActExcel>
+<ActExcel Active="True" Description="Read Data first row with filter, PK &amp; multi updates" ExcelActionType="ReadData" Guid="5f1a3526-6cf4-4e1d-bf6c-61714be505a6" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="f033b5df-2afa-400d-96d3-d8b286c93d08" Param="ColMappingRules" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="8cccbdcd-b66a-4c35-83de-a0f0ce21e1f7" Param="ExcelFileName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="~\\Documents\WOEI\WOEIExcelReadUpdate.xlsx" />
+<ActInputValue Guid="5df5a50d-05b5-4708-99d3-02e4d70fba1d" Param="SheetName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Data" />
+<ActInputValue Guid="af9005e4-8606-4e09-9404-351fd51558c6" Param="SelectRowsWhere" ParentGuid="00000000-0000-0000-0000-000000000000" Value="AB=4" />
+<ActInputValue Guid="76b73f5c-0442-4a7e-9a7c-efd91281a361" Param="PrimaryKeyColumn" ParentGuid="00000000-0000-0000-0000-000000000000" Value="AB" />
+<ActInputValue Guid="900815e6-efba-4c9d-9118-5fc3fc0c3096" Param="SetDataUsed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="DE='test',CD=56" />
+</InputValues>
+</ActExcel>
+<ActExcel Active="True" Description="Read Data all rows with filter, PK &amp; multi updates" ExcelActionType="ReadData" Guid="72036e06-4a4d-423f-9633-8986107b094a" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SelectAllRows="True" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e0599b26-7f06-40c6-8464-dfe31d480da8" Param="ColMappingRules" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="3457e735-7b59-48a3-8b41-1ccea15e34a9" Param="ExcelFileName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="~\\Documents\WOEI\WOEIExcelReadUpdate.xlsx" />
+<ActInputValue Guid="933de19f-1e2d-41a4-abe2-168d426babf0" Param="SheetName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Data" />
+<ActInputValue Guid="e13f5dea-6b17-49e3-9d60-25d2ddd625bd" Param="SelectRowsWhere" ParentGuid="00000000-0000-0000-0000-000000000000" Value="AB=4" />
+<ActInputValue Guid="8bc9aad4-7f2a-41e9-98cf-45d9d0dd9ac4" Param="PrimaryKeyColumn" ParentGuid="00000000-0000-0000-0000-000000000000" Value="AB" />
+<ActInputValue Guid="e55baf04-4a12-4075-886a-e89e4691a7a6" Param="SetDataUsed" ParentGuid="00000000-0000-0000-0000-000000000000" Value="DE='test',CD=56" />
+</InputValues>
+</ActExcel>
+<ActExcel Active="True" Description="Write Data select first" ExcelActionType="WriteData" Guid="75bbfedb-c861-4c10-971b-3ec1c38ebab6" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="2d236622-1ded-4bbd-8f91-0c01a9ea17e2" Param="ColMappingRules" ParentGuid="00000000-0000-0000-0000-000000000000" Value="BC=3333" />
+<ActInputValue Guid="e9b8d922-469b-4904-8f32-845c4dad4832" Param="ExcelFileName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="~\\Documents\WOEI\WOEIExcelWrite.xlsx" />
+<ActInputValue Guid="50e92444-e005-4813-a728-8a50e12588d7" Param="SheetName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Data" />
+<ActInputValue Guid="86ac3e80-3db3-40e2-8ba6-d6c6471cfa0f" Param="SelectRowsWhere" ParentGuid="00000000-0000-0000-0000-000000000000" Value="AB=2" />
+<ActInputValue Guid="2952ff08-989d-432d-82fb-cde527e736c0" Param="PrimaryKeyColumn" ParentGuid="00000000-0000-0000-0000-000000000000" Value="AB" />
+<ActInputValue Guid="7b137453-6246-4827-99e6-0932d470d17d" Param="SetDataUsed" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActExcel>
+<ActExcel Active="True" Description="Write Data select all" ExcelActionType="WriteData" Guid="8353555c-c570-45ad-b6cb-64e551f70e87" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SelectAllRows="True" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="1b334670-7c83-4e86-8e3f-1ff5283d9152" Param="ColMappingRules" ParentGuid="00000000-0000-0000-0000-000000000000" Value="BC=3333" />
+<ActInputValue Guid="47d60e85-6673-4686-9fd4-abeaa26d54cd" Param="ExcelFileName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="~\\Documents\WOEI\WOEIExcelWrite.xlsx" />
+<ActInputValue Guid="03e15478-fd2c-4ec7-b997-cdb5ae2c83ae" Param="SheetName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Data" />
+<ActInputValue Guid="b738707f-3235-4b54-9e50-b4531d77944f" Param="SelectRowsWhere" ParentGuid="00000000-0000-0000-0000-000000000000" Value="AB=2" />
+<ActInputValue Guid="022b0847-503b-460d-838f-4b7275d49a7c" Param="PrimaryKeyColumn" ParentGuid="00000000-0000-0000-0000-000000000000" Value="AB" />
+<ActInputValue Guid="1648fd21-cf75-460d-89df-286b40350083" Param="SetDataUsed" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActExcel>
+<ActExcel Active="True" Description="Write Data first row filter match 2 rows" ExcelActionType="WriteData" Guid="a08d6642-38fc-4ef3-a694-921240beef41" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="e8b1ad6b-d7f8-48e3-b9c1-a0451127b9da" Param="ColMappingRules" ParentGuid="00000000-0000-0000-0000-000000000000" Value="DE='two2'" />
+<ActInputValue Guid="578d40cb-b0a8-46c3-9c23-2b1157f936c6" Param="ExcelFileName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="~\\Documents\WOEI\WOEIExcelWrite.xlsx" />
+<ActInputValue Guid="f402f6e8-37e7-4f9f-b1f2-8b09480130b1" Param="SheetName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Data" />
+<ActInputValue Guid="2701afe3-897f-4444-ac14-60048a72bdc9" Param="SelectRowsWhere" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CD='33'" />
+<ActInputValue Guid="2c79dac5-c47a-41b4-8f1a-f224f259a351" Param="PrimaryKeyColumn" ParentGuid="00000000-0000-0000-0000-000000000000" Value="AB" />
+<ActInputValue Guid="bfe3884d-1ac0-4647-9ba7-544100549563" Param="SetDataUsed" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActExcel>
+<ActExcel Active="True" Description="Write Data all row filter match 2 rows" ExcelActionType="WriteData" Guid="c9307dc8-c77c-49ad-aa8a-0001a7bd3c53" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SelectAllRows="True" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="3f137167-5bed-4179-a0fe-d65b1dbc9257" Param="ColMappingRules" ParentGuid="00000000-0000-0000-0000-000000000000" Value="DE='two2'" />
+<ActInputValue Guid="89d22f73-bd66-44e8-8b73-d6cbde21a959" Param="ExcelFileName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="~\\Documents\WOEI\WOEIExcelWrite.xlsx" />
+<ActInputValue Guid="83a1a04c-cabc-4104-9f5e-4ed8f3b4a404" Param="SheetName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Data" />
+<ActInputValue Guid="8b1268b0-a278-4c7b-bf6a-4500b5b51afb" Param="SelectRowsWhere" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CD='33'" />
+<ActInputValue Guid="65fbd0c6-89f4-40b5-a642-58307058d232" Param="PrimaryKeyColumn" ParentGuid="00000000-0000-0000-0000-000000000000" Value="AB" />
+<ActInputValue Guid="8b7d45f5-5a70-41a3-b578-d94a0c7b7879" Param="SetDataUsed" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActExcel>
+<ActExcel Active="True" Description="Read Cell Data" ExcelActionType="ReadCellData" Guid="def2415d-607d-484a-b3c2-2227a5be2923" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="2d236622-1ded-4bbd-8f91-0c01a9ea17e2" Param="ColMappingRules" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="e9b8d922-469b-4904-8f32-845c4dad4832" Param="ExcelFileName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="~\\Documents\WOEI\WOEIExcel.xlsx" />
+<ActInputValue Guid="50e92444-e005-4813-a728-8a50e12588d7" Param="SheetName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Data" />
+<ActInputValue Guid="86ac3e80-3db3-40e2-8ba6-d6c6471cfa0f" Param="SelectRowsWhere" ParentGuid="00000000-0000-0000-0000-000000000000" Value="A2" />
+<ActInputValue Guid="2952ff08-989d-432d-82fb-cde527e736c0" Param="PrimaryKeyColumn" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="56e1f2b6-8a5b-440a-9571-f0ec2babcbc6" mExpected="2" Operator="Equals" Param="AB" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActExcel>
+<ActExcel Active="True" Description="Read Multi Cell Data" ExcelActionType="ReadCellData" Guid="0c524699-62a1-45eb-b890-390e2e3df54d" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SelectAllRows="True" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="c0f274ac-5288-43e4-b8e5-d417cc15b5f0" Param="ColMappingRules" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="7324bac1-19f0-4b47-a140-f2c8cbfef444" Param="ExcelFileName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="~\\Documents\WOEI\WOEIExcel.xlsx" />
+<ActInputValue Guid="28af0978-c608-4780-aae6-41a2606bed3d" Param="SheetName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Data" />
+<ActInputValue Guid="b4b48337-6ea3-44c2-a97f-2285de97bc94" Param="SelectRowsWhere" ParentGuid="00000000-0000-0000-0000-000000000000" Value="A3:D5" />
+<ActInputValue Guid="454f8a00-3d1e-4bb8-ab3e-aed9258ac022" Param="PrimaryKeyColumn" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+</ActExcel>
+</Acts>
+
+<Variables>
+<VariableString Guid="2788a6b9-8092-4603-8718-3115c4c6815b" InitialStringValue="CD='33'" MappedOutputType="None" Name="filter one" ParentGuid="04ea5d6e-667e-4d0e-97aa-96d22b970b1d" ParentName="Excel\Excel act\Excel actions" ParentType="Activity" />
+</Variables>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Advanced Excel Actions" ActivityName="Excel advanced actions" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="166f1f32-9509-40eb-ba0d-ec81d35ff830" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="WithoutPlatform-App">
+<Acts>
+<ActExcel Active="True" Description="Read excel variable with filter" ExcelActionType="ReadData" Guid="d26d48d5-5b2f-4e80-939e-cd05acf6f303" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SelectAllRows="True" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="0527c996-8476-44e4-aa81-d3470e3ce504" Param="ColMappingRules" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="789af5a6-cd71-48dc-bbee-751f33cf6e85" Param="ExcelFileName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="~\\Documents\WOEI\WOEIExcel.xlsx" />
+<ActInputValue Guid="05c3f24c-d9f8-49d6-a71b-a4a0e037a703" Param="SheetName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Data" />
+<ActInputValue Guid="019869c2-3ea8-44a1-bfab-d75b142423aa" Param="SelectRowsWhere" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=filter1}" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="79f63222-5669-48a5-8b3c-5a54b7ac77d3" mExpected="5" Operator="Equals" Param="AB" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="None" />
+<ActReturnValue Active="True" Guid="5dc0b98e-9bfa-49ef-aa0e-ff7bc7416690" mExpected="1217.424" Operator="Equals" Param="BC" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="None" />
+<ActReturnValue Active="True" Guid="242dcb99-0a02-4830-b4c3-659727a48eed" mExpected="6" Operator="Equals" Param="CD" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="None" />
+<ActReturnValue Active="True" Guid="4cff20a7-ff19-42da-893e-197173552f56" mExpected="DS123" Operator="Equals" Param="DE" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="None" />
+</ReturnValues>
+</ActExcel>
+<ActExcel Active="True" Description="Path as VE and Actual to Store" ExcelActionType="ReadData" Guid="ce9ea74f-f44a-497d-b4a1-c860cbafbed0" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="89171259-543e-4e4f-9c7e-30b9b0651c8f" Param="ColMappingRules" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="3968703b-1d3a-4810-829b-bcc53beab030" Param="ExcelFileName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{FD Object=Solution Field=Folder}{Var Name=fileName1}" />
+<ActInputValue Guid="0f6e3051-7b2a-480a-8302-2f09c8b27893" Param="SheetName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Data" />
+<ActInputValue Guid="fdc96c89-e8d0-4942-a52e-879e8d0e0726" Param="PrimaryKeyColumn" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CD" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="634adada-4235-4a7c-b165-17fbf25d235e" mExpected="2" Operator="Equals" Param="AB" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="filterToStore" />
+<ActReturnValue Active="True" Guid="3d42cb00-a02c-43eb-b6c8-af10fe05b8a1" mExpected=" 2" Operator="Equals" Param="BC" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+<ActReturnValue Active="True" Guid="288147ed-ea40-4612-8c9e-52220331901c" mExpected="3" Operator="Equals" Param="CD" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+<ActReturnValue Active="True" Guid="48557c01-4f3d-4a53-88aa-fc812d8ccac4" mExpected="DS123" Operator="Equals" Param="DE" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="None" />
+</ReturnValues>
+</ActExcel>
+<ActExcel Active="True" Description="Excel Action" ExcelActionType="ReadData" Guid="bfea7208-4673-432a-ae56-d29093f69546" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="503c39f9-f2f8-4a0b-a2f9-1b509ecc60b1" Param="ColMappingRules" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="966b0f0f-3ecb-4999-9ba7-750ef7ec5257" Param="ExcelFileName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="~\\Documents\WOEI\Calendar.xlsx" />
+<ActInputValue Guid="7f2e75df-a468-4e22-a0cc-c6b87298c774" Param="SheetName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="WUAT_BGP" />
+<ActInputValue Guid="86351d89-2578-4477-9f23-2819d9dde8a5" Param="SelectRowsWhere" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Serial='1'" />
+</InputValues>
+</ActExcel>
+<ActExcel Active="True" Description="Excel Action_Copy" ExcelActionType="ReadCellData" Guid="5938bd01-b163-48b9-bf9e-47af2293c996" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<InputValues>
+<ActInputValue Guid="b1f5b3a6-41c0-4788-861d-128dd8a58dd5" Param="ColMappingRules" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="8d9bfd2d-a71f-4f37-aad5-1aaef09cafd2" Param="ExcelFileName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="~\\Documents\WOEI\Calendar.xlsx" />
+<ActInputValue Guid="41dddeec-8d3f-4b92-be0a-ff9837f0e803" Param="SheetName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="WUAT_BGP" />
+<ActInputValue Guid="1a81a630-a4d9-4578-a916-92cbdc866359" Param="SelectRowsWhere" ParentGuid="00000000-0000-0000-0000-000000000000" Value="A5:C17" />
+</InputValues>
+</ActExcel>
+</Acts>
+</Activity>
+</Activities>
+
+<ActivitiesGroups>
+<ActivitiesGroup Guid="b31f96e9-f2b7-4e6a-bd5c-d5bd6655df21" Name="Excel act" ParentGuid="00000000-0000-0000-0000-000000000000">
+<ActivitiesIdentifiers>
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="04ea5d6e-667e-4d0e-97aa-96d22b970b1d" ActivityName="Excel actions" Guid="58d4084d-a1b0-4f62-9e00-d2d858fd34b7" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</ActivitiesIdentifiers>
+</ActivitiesGroup>
+<ActivitiesGroup Guid="ae1afda4-443e-4a0f-b643-92f5deeb9f58" Name="Advanced Excel Actions" ParentGuid="00000000-0000-0000-0000-000000000000">
+<ActivitiesIdentifiers>
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityGuid="166f1f32-9509-40eb-ba0d-ec81d35ff830" ActivityName="Excel advanced actions" Guid="3bf02a8f-cc45-432c-a654-3007543e9d73" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</ActivitiesIdentifiers>
+</ActivitiesGroup>
+<ActivitiesGroup Guid="be620c07-2c7e-47e7-85dd-d31cde59a273" Name="Excel Advanced" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</ActivitiesGroups>
+
+<TargetApplications>
+<TargetApplication AppName="WithoutPlatform-App" Guid="5494c714-8d72-4085-b75f-8f6b1dd80d97" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</TargetApplications>
+
+<Variables>
+<VariableSelectionList Guid="84ec34c1-e41b-441d-9a8d-fc09d8da70f1" MappedOutputType="None" Name="Env_Type" ParentGuid="8b64fa82-d5f3-4fe0-b46d-9012eac42e4e" ParentName="Excel" ParentType="Business Flow" Value="Fully_Integrated">
+<OptionalValuesList>
+<OptionalValue Guid="d69b438c-6ddf-4aeb-bb51-d3700912d92a" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CPQ_Only" />
+<OptionalValue Guid="44cc0975-4263-4a87-9f4d-4a00e9517c39" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ODO_Only" />
+<OptionalValue Guid="f1423f63-54c8-4702-959a-f82f698831ff" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Fully_Integrated" />
+</OptionalValuesList>
+</VariableSelectionList>
+<VariableString Guid="5cbbd1c5-5118-416c-984e-4fef48a4b29a" InitialStringValue="AB &gt;3 and CD&gt;4 and DE='DS123'" MappedOutputType="None" Name="filter1" ParentGuid="8b64fa82-d5f3-4fe0-b46d-9012eac42e4e" ParentName="Excel" ParentType="Business Flow" />
+<VariableString Guid="996d9f30-faee-4ba0-a60d-4de810221720" InitialStringValue="\Documents\WOEI\WOEIExcel.xlsx" MappedOutputType="None" Name="fileName1" ParentGuid="8b64fa82-d5f3-4fe0-b46d-9012eac42e4e" ParentName="Excel" ParentType="Business Flow" />
+<VariableString Guid="99ff8cf1-b405-45f8-bd3a-040c439a8368" InitialStringValue="2" MappedOutputType="None" Name="filterToStore" ParentGuid="8b64fa82-d5f3-4fe0-b46d-9012eac42e4e" ParentName="Excel" ParentType="Business Flow" />
+</Variables>
+</BusinessFlow></GingerRepositoryItem>

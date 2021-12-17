@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="a5727434-5e67-4179-af41-b26aa4bc291e" ItemType="ActValidation" CreatedBy="HAIMUZ" Created="202108091501" GingerVersion="4.1.0.0" Version="2" LastUpdateBy="arvindgh" LastUpdate="202112170750" />
+<ActValidation Active="True" Description="Condition Validation Action" Guid="a5727434-5e67-4179-af41-b26aa4bc291e" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<FlowControls>
+<FlowControl Active="True" BusinessFlowControlAction="GoToBusinessFlow" FlowControlAction="StopBusinessFlow" Guid="014d2ed7-a706-4e45-a1ed-7368a8cbbb61" Operator="ActionPassed" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</FlowControls>
+
+<InputValues>
+<ActInputValue Guid="74176c8f-425a-4122-ba8e-ba0b81a26292" Param="CalcEngineType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CS" />
+<ActInputValue Guid="efaef810-8785-4bed-8063-b4e56c2e069f" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="&quot;{Var Name=OSWin}&quot;.Contains(&quot;Win&quot;)" />
+</InputValues>
+</ActValidation></GingerRepositoryItem>
