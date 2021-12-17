@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<GingerRepositoryItem><Header ItemGuid="c8d525f1-8e0f-4280-a6bb-7b0dee70599e" ItemType="BusinessFlow" CreatedBy="MENIK" Created="202108221652" GingerVersion="4.1.0.0" Version="10" LastUpdateBy="arvindgh" LastUpdate="202112170757" />
+<GingerRepositoryItem><Header ItemGuid="c8d525f1-8e0f-4280-a6bb-7b0dee70599e" ItemType="BusinessFlow" CreatedBy="MENIK" Created="202108221652" GingerVersion="4.1.0.0" Version="12" LastUpdateBy="arvindgh" LastUpdate="202112170810" />
 <BusinessFlow Description="transfer all actions from GingerCore project to GingerCoreNet and the actions dependencies " Elapsed="26221" Guid="c8d525f1-8e0f-4280-a6bb-7b0dee70599e" Name="General-Actions_Linux" ParentGuid="00000000-0000-0000-0000-000000000000" Source="Ginger" Status="Unknown">
 <Activities>
-<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Act Validation VB" ActivityName="Variables tests VB" AutomationStatus="Development" Description="test variable condition from differnet level " ErrorHandlerMappingType="AllAvailableHandlers" Guid="59f9e0f2-8461-473a-a7d0-b2241ccb03c0" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="WithoutPlatform-App">
+<Activity ActionRunOption="StopActionsRunOnFailure" ActivitiesGroupID="Act Validation VB" ActivityName="Variables tests VB" AutomationStatus="Development" Description="test variable condition from differnet level " ErrorHandlerMappingType="AllAvailableHandlers" Guid="59f9e0f2-8461-473a-a7d0-b2241ccb03c0" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="WithoutPlatform-App">
 <Acts>
 <ActSetVariableValue Active="True" Description="Set Variable Action" Guid="2277d5b0-97f0-4560-a559-745ad9936ba0" ParentGuid="30dcbaeb-8315-4aec-a546-89a2d2a105b8" Platform="NA" RetryMechanismInterval="5" SetVariableValueOption="SetValue" StatusConverter="None" VariableName="OS Platform" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
 <InputValues>
@@ -16,7 +16,7 @@
 
 <InputValues>
 <ActInputValue Guid="37943cc1-1a9f-4aed-8660-07cae98b8586" Param="CalcEngineType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CS" />
-<ActInputValue Guid="b716e1c1-9023-4487-9c8a-fbef10b473c5" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="&quot;{Var Name=OS Platform}&quot;.Contains(&quot;Win&quot;)" />
+<ActInputValue Guid="b716e1c1-9023-4487-9c8a-fbef10b473c5" Param="Value" ParentGuid="00000000-0000-0000-0000-000000000000" Value="&quot;{Var Name=OS Platform}&quot;.Contains(&quot;Unix&quot;)" />
 </InputValues>
 </ActValidation>
 <ActValidation Active="True" Description="Bigger then Activity Level" Guid="0bf4859d-1f43-497d-a5f0-d0fcade238ce" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
@@ -49,7 +49,7 @@
 <VariableString Description="activity level variable" Guid="a38a86cc-0833-41c4-b64a-ae155dcbf5a5" InitialStringValue="17" MappedOutputType="None" Name="ActivityLevel" ParentGuid="59f9e0f2-8461-473a-a7d0-b2241ccb03c0" ParentName="General-Actions_Linux\Act Validation VB\Variables tests VB" ParentType="Activity" />
 </Variables>
 </Activity>
-<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Act Validation VB" ActivityName="Comparision Operators" AutomationStatus="Development" Description="tests comparition operators on const number condition" ErrorHandlerMappingType="AllAvailableHandlers" Guid="5b829dd3-9416-4700-97d1-616aea0307b6" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="WithoutPlatform-App">
+<Activity ActionRunOption="StopActionsRunOnFailure" ActivitiesGroupID="Act Validation VB" ActivityName="Comparision Operators" AutomationStatus="Development" Description="tests comparition operators on const number condition" ErrorHandlerMappingType="AllAvailableHandlers" Guid="5b829dd3-9416-4700-97d1-616aea0307b6" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="WithoutPlatform-App">
 <Acts>
 <ActValidation Active="True" Description="Equals" Guid="72f610c7-7f11-4f84-b41c-6dfad08fcc46" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
 <InputValues>
@@ -89,7 +89,7 @@
 </ActValidation>
 </Acts>
 </Activity>
-<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Act Validation VB" ActivityName="Logical Operators" AutomationStatus="Development" Description="tests logical VB operators" ErrorHandlerMappingType="AllAvailableHandlers" Guid="e6fdbbf0-2c14-44ef-a1e4-fa8e4968a16a" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="WithoutPlatform-App">
+<Activity ActionRunOption="StopActionsRunOnFailure" ActivitiesGroupID="Act Validation VB" ActivityName="Logical Operators" AutomationStatus="Development" Description="tests logical VB operators" ErrorHandlerMappingType="AllAvailableHandlers" Guid="e6fdbbf0-2c14-44ef-a1e4-fa8e4968a16a" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="WithoutPlatform-App">
 <Acts>
 <ActValidation Active="True" Description="Not operator" Guid="0ccb9d6f-a36b-4b34-990d-2a8e8e9764d4" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
 <InputValues>
@@ -117,7 +117,7 @@
 </ActValidation>
 </Acts>
 </Activity>
-<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Act Validation VB" ActivityName="Arithmetic operations" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="4147eb4d-a93f-4aad-abf0-50e9e9b368a5" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="50%" TargetApplication="WithoutPlatform-App">
+<Activity ActionRunOption="StopActionsRunOnFailure" ActivitiesGroupID="Act Validation VB" ActivityName="Arithmetic operations" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="4147eb4d-a93f-4aad-abf0-50e9e9b368a5" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="50%" TargetApplication="WithoutPlatform-App">
 <Acts>
 <ActValidation Description="Exponent" Guid="7531c895-9724-42c9-8676-630bc021ad14" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
 <InputValues>
@@ -522,7 +522,7 @@
 </ActFileOperations>
 <ActFileOperations Active="True" Description="Execute file Linux" FileOperationMode="Execute" Guid="10e452a7-414f-404e-a2cc-2f8e1f1a0231" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
 <InputValues>
-<ActInputValue Guid="44433274-04b4-4657-9bb2-0420c6c1bd92" Param="SourceFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/bin/bash" />
+<ActInputValue Guid="44433274-04b4-4657-9bb2-0420c6c1bd92" Param="SourceFilePath" ParentGuid="00000000-0000-0000-0000-000000000000" Value="/bin/ash" />
 <ActInputValue Guid="6d4a50c4-a604-42b6-9fb0-ea4f47fb20b4" Param="DestinationFolder" ParentGuid="00000000-0000-0000-0000-000000000000" />
 <ActInputValue Guid="43923f42-d908-4f3a-b47f-4396f4c10427" Param="Arguments" ParentGuid="00000000-0000-0000-0000-000000000000" Value="dotnet &quot;{FD Object=Solution Field=Folder}/Documents/Projects/netcoreapp/ConsoleAppDemo.dll&quot; dynamic --filename &quot;{FD Object=Solution Field=Folder}/Documents/Projects/netcoreapp/ConsoleAppDemo.runtimeconfig.dev.json&quot;" />
 </InputValues>
