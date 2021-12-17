@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<GingerRepositoryItem><Header ItemGuid="8b64fa82-d5f3-4fe0-b46d-9012eac42e4e" ItemType="BusinessFlow" CreatedBy="HAIMUZ" Created="202104120927" GingerVersion="4.1.0.0" Version="95" LastUpdateBy="arvindgh" LastUpdate="202112170757" />
+<GingerRepositoryItem><Header ItemGuid="8b64fa82-d5f3-4fe0-b46d-9012eac42e4e" ItemType="BusinessFlow" CreatedBy="HAIMUZ" Created="202104120927" GingerVersion="4.1.0.0" Version="96" LastUpdateBy="arvindgh" LastUpdate="202112170814" />
 <BusinessFlow Elapsed="5948" Guid="8b64fa82-d5f3-4fe0-b46d-9012eac42e4e" Name="Excel" ParentGuid="00000000-0000-0000-0000-000000000000" Source="Ginger" Status="Unknown">
 <Activities>
 <Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Excel act" ActivityName="Excel actions" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="04ea5d6e-667e-4d0e-97aa-96d22b970b1d" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="WithoutPlatform-App">
@@ -44,9 +44,12 @@
 <ActInputValue Guid="dd220ecb-618f-4643-a4c4-d2dde63bb106" Param="ColMappingRules" ParentGuid="00000000-0000-0000-0000-000000000000" />
 <ActInputValue Guid="bc13a09f-2f96-492e-b5e3-1044a05962d6" Param="ExcelFileName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="~\\Documents\WOEI\WOEIExcel.xlsx" />
 <ActInputValue Guid="8710c778-0c6f-472f-8a3c-62e3e312af38" Param="SheetName" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Data" />
-<ActInputValue Guid="83442e5e-fd34-4fdb-9269-c27b8fabfe24" Param="SelectRowsWhere" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CD='33'" />
+<ActInputValue Guid="83442e5e-fd34-4fdb-9269-c27b8fabfe24" Param="SelectRowsWhere" ParentGuid="00000000-0000-0000-0000-000000000000" Value="CD='3'" />
 <ActInputValue Guid="670746d6-9fd4-444a-a8e7-0cc0c2572609" Param="PrimaryKeyColumn" ParentGuid="00000000-0000-0000-0000-000000000000" />
 </InputValues>
+
+<ReturnValues>
+</ReturnValues>
 </ActExcel>
 <ActExcel Active="True" Description="Read Data all rows with filter_Copy" ExcelActionType="ReadData" Guid="b48eb55e-c370-4876-9f53-ba09c66ecc56" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" SelectAllRows="True" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
 <InputValues>
@@ -219,7 +222,7 @@
 </Acts>
 
 <Variables>
-<VariableString Guid="2788a6b9-8092-4603-8718-3115c4c6815b" InitialStringValue="CD='33'" MappedOutputType="None" Name="filter one" ParentGuid="04ea5d6e-667e-4d0e-97aa-96d22b970b1d" ParentName="Excel\Excel act\Excel actions" ParentType="Activity" />
+<VariableString Guid="2788a6b9-8092-4603-8718-3115c4c6815b" InitialStringValue="CD='3'" MappedOutputType="None" Name="filter one" ParentGuid="04ea5d6e-667e-4d0e-97aa-96d22b970b1d" ParentName="Excel\Excel act\Excel actions" ParentType="Activity" />
 </Variables>
 </Activity>
 <Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Advanced Excel Actions" ActivityName="Excel advanced actions" AutomationStatus="Development" ErrorHandlerMappingType="AllAvailableHandlers" Guid="166f1f32-9509-40eb-ba0d-ec81d35ff830" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="WithoutPlatform-App">
